@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="meta.demo">Request a demo - DoofPlus</title>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="public/assets/styles/style.css">
+</head>
+<body class="page-simple">
+<header class="navbar">
+  <div class="container navbar-inner">
+    <div class="brand-group">
+      <a href="index.html" class="brand"><img src="public/assets/images/doofplus-logo.png" alt="DoofPlus" class="brand-logo"></a>
+      <a href="index.html" class="link-teal back-link" data-i18n="nav.back">← Back to DoofPlus</a>
+    </div>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button class="lang-btn active" type="button" data-lang="en">EN</button>
+      <button class="lang-btn" type="button" data-lang="es">ES</button>
+    </div>
+  </div>
+</header>
+
+<main class="simple-main">
+  <!-- Request form -->
+  <div class="container demo-grid" data-demo-view="form">
+    <aside class="demo-aside">
+      <span class="overline overline-light" data-i18n="demo.overline">Request a demo</span>
+      <h1 data-i18n="demo.title">See DoofPlus with your own quality workflow</h1>
+      <p data-i18n="demo.text"></p>
+      <ul class="check-list">
+        <li><strong data-i18n="demo.p1_title"></strong><span data-i18n="demo.p1_text"></span></li>
+        <li><strong data-i18n="demo.p2_title"></strong><span data-i18n="demo.p2_text"></span></li>
+        <li><strong data-i18n="demo.p3_title"></strong><span data-i18n="demo.p3_text"></span></li>
+      </ul>
+    </aside>
+
+    <form class="form-card demo-form" novalidate data-require-accept>
+      <h2 data-i18n="demo.form_title">Request a demo</h2>
+      <p class="form-subtitle" data-i18n="demo.form_subtitle"></p>
+      <div class="form-error" hidden data-i18n="form.error_banner"></div>
+      <label class="field">
+        <span><span data-i18n="form.email">Work email</span> *</span>
+        <input type="email" name="email" autocomplete="email" required data-i18n-placeholder="form.email_ph">
+        <small class="field-error" hidden data-i18n="form.error_email"></small>
+      </label>
+      <label class="field">
+        <span><span data-i18n="form.lab">Laboratory name</span> <em data-i18n="form.optional">(optional)</em></span>
+        <input type="text" name="lab" autocomplete="organization" data-i18n-placeholder="form.lab_ph">
+      </label>
+      <fieldset class="field">
+        <legend><span data-i18n="form.segment">I am a</span> *</legend>
+        <div class="segment-options">
+          <label class="segment-option"><input type="radio" name="segment" value="qa" checked><span data-i18n="form.qa">QA/QC Specialist</span></label>
+          <label class="segment-option"><input type="radio" name="segment" value="production"><span data-i18n="form.prod">Production Supervisor</span></label>
+        </div>
+      </fieldset>
+      <label class="checkbox">
+        <input type="checkbox" name="accept" checked>
+        <span><span data-i18n="form.accept_pre">I accept the</span> <a href="privacy.html" class="underline" data-i18n="form.accept_link">Privacy Policy</a> <span data-i18n="form.accept_post"></span></span>
+      </label>
+      <small class="field-error" hidden data-accept-error data-i18n="form.error_accept"></small>
+      <button type="submit" class="btn btn-primary btn-block" data-i18n="form.submit">Request demo</button>
+      <p class="form-note" data-i18n="form.required"></p>
+    </form>
+  </div>
+
+  <!-- Confirmation -->
+  <div class="container" data-demo-view="success" hidden>
+    <section class="success-card">
+      <span class="success-icon" aria-hidden="true">✓</span>
+      <h1 data-i18n="demo.success_title">Demo request received</h1>
+      <p class="success-text" data-i18n="demo.success_text" data-i18n-vars></p>
+      <div class="summary">
+        <h2 data-i18n="demo.summary">Request summary</h2>
+        <dl>
+          <div><dt data-i18n="demo.id"></dt><dd data-request="id"></dd></div>
+          <div><dt data-i18n="demo.email"></dt><dd data-request="email"></dd></div>
+          <div><dt data-i18n="demo.lab"></dt><dd data-request="lab"></dd></div>
+          <div><dt data-i18n="demo.segment"></dt><dd data-request="segment"></dd></div>
+          <div><dt data-i18n="demo.status"></dt><dd><span class="status-badge" data-i18n="demo.received"></span></dd></div>
+          <div><dt data-i18n="demo.requested_on"></dt><dd data-request="date"></dd></div>
+        </dl>
+      </div>
+      <h2 class="next-title" data-i18n="demo.next">What happens next?</h2>
+      <ol class="steps">
+        <li data-i18n="demo.n1"></li>
+        <li data-request-step></li>
+        <li data-i18n="demo.n3"></li>
+      </ol>
+      <div class="success-actions">
+        <a href="index.html" class="btn btn-primary" data-i18n="demo.back">Back to DoofPlus</a>
+        <a href="index.html#plans" class="btn btn-outline" data-i18n="demo.see_plans">See plans</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="footer footer-simple">
+  <div class="container footer-bottom">
+    <p data-i18n="footer.copyright"></p>
+    <div class="footer-legal">
+      <a href="terms.html" class="underline" data-i18n="footer.terms"></a>
+      <a href="privacy.html" class="underline" data-i18n="footer.privacy"></a>
+    </div>
+  </div>
+</footer>
+
+<script src="public/assets/scripts/translations/en.js"></script>
+<script src="public/assets/scripts/translations/es.js"></script>
+<script src="public/assets/scripts/main.js"></script>
+</body>
+</html>
