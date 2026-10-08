@@ -35,9 +35,11 @@
 .features-grid > :first-child { grid-column: span 5; }
 .features-grid > :last-child { grid-column: span 7; }
 
-/* About the product: text 5 columns, video 7 columns */
-.product-grid > :first-child { grid-column: span 5; }
-.product-grid > :last-child { grid-column: span 7; }
+/* About the product: intro and chapters on 5 columns, video on 7 columns across both rows */
+.product-grid { grid-template-rows: auto auto; }
+.product-grid > .product-intro { grid-column: 1 / span 5; grid-row: 1; align-self: end; }
+.product-grid > .product-details { grid-column: 1 / span 5; grid-row: 2; align-self: start; }
+.product-grid > .video-player { grid-column: 6 / span 7; grid-row: 1 / span 2; align-self: center; }
 
 /* About us: text 6 columns, mission and vision 6 columns */
 .about-grid > * { grid-column: span 6; }
@@ -46,9 +48,11 @@
 .team-grid > * { grid-column: span 4; }
 .team-grid > :nth-child(4) { grid-column: 3 / span 4; }
 
-/* Contact: text 5 columns, form on columns 7-12 */
-.contact-grid > :first-child { grid-column: span 5; }
-.contact-grid > :last-child { grid-column: 7 / span 6; }
+/* Contact: intro and contact info on 5 columns, form on columns 7-12 across both rows */
+.contact-grid { grid-template-rows: auto 1fr; }
+.contact-grid > .contact-intro { grid-column: 1 / span 5; grid-row: 1; }
+.contact-grid > .contact-info { grid-column: 1 / span 5; grid-row: 2; align-self: start; }
+.contact-grid > form { grid-column: 7 / span 6; grid-row: 1 / span 2; }
 
 /* Demo request: summary 5 columns, form 7 columns */
 .demo-grid > :first-child { grid-column: span 5; }

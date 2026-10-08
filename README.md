@@ -68,6 +68,16 @@ Following the Web Style Guide (section 4.1.2), every layout is a **12-column flu
 | Tablet (≤ 1080px) | 24px | Services 6 + 6 · Team 6 + 6 · Footer 12, then 3 + 3 + 3 + 3 |
 | Mobile (≤ 900px) | 16px | Every block spans 12 columns (one column) |
 
+### Mobile layout
+
+On mobile (≤ 900px) the site follows the Figma phone design:
+
+- Header with logo, language switch and a menu button that opens a full-screen menu (links, Sign in, Get Started, Request a demo and language).
+- The Features preview panel is hidden and only the accordion remains.
+- About the Product shows the video between the intro and the chapters; Contact shows the email and location after the form.
+- Footer link groups in two columns, followed by the language switch, the QA/QC and Production access buttons and the copyright.
+- The demo request page drops its dark panel, shows a short "← Back" link and lists the request summary as label/value rows.
+
 ## Accessibility and SEO
 
 - Skip link to the main content, ARIA attributes on menus, accordions, toggles and form errors, and alternative text on every image.

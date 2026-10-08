@@ -1,30 +1,47 @@
+import { i18n } from '../i18n.js';
+
 /**
- * Navbar of the landing page (US44): mobile menu and highlight of the section in view.
+ * Navbar of the landing page (US44): full-screen mobile menu and
+ * highlight of the section in view in the desktop and mobile links.
  */
 export function initializeNavbar() {
-  const navbar = document.querySelector('.navbar');
-  const toggle = document.querySelector('.menu-toggle');
-
-  if (navbar && toggle) {
-    const setOpen = open => {
-      navbar.classList.toggle('open', open);
-      toggle.setAttribute('aria-expanded', String(open));
-    };
-    toggle.addEventListener('click', () => setOpen(!navbar.classList.contains('open')));
-    navbar.querySelectorAll('.nav-links a, .nav-actions a').forEach(link => {
-      link.addEventListener('click', () => setOpen(false));
-    });
-    document.addEventListener('keydown', event => {
-      if (event.key === 'Escape') setOpen(false);
-    });
-  }
-
+  initializeMobileMenu();
   highlightSectionInView();
 }
 
+function initializeMobileMenu() {
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  if (!toggle || !menu) return;
+
+  const setOpen = open => {
+    menu.hidden = !open;
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', i18n.t(open ? 'nav.close' : 'nav.menu') || '');
+    document.body.classList.toggle('menu-open', open);
+  };
+
+  toggle.addEventListener('click', () => setOpen(menu.hidden));
+  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setOpen(false)));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !menu.hidden) {
+      setOpen(false);
+      toggle.focus();
+    }
+  });
+
+  // The menu only exists on mobile: close it if the screen grows to desktop size.
+  window.matchMedia('(min-width: 901px)').addEventListener('change', event => {
+    if (event.matches) setOpen(false);
+  });
+
+  i18n.subscribe(() => setOpen(!menu.hidden));
+}
+
 function highlightSectionInView() {
-  const links = [...document.querySelectorAll('.nav-links a[href^="#"]')];
-  const sections = links.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+  const links = [...document.querySelectorAll('.nav-links a[href^="#"], .mobile-links a[href^="#"]')];
+  const ids = [...new Set(links.map(link => link.getAttribute('href')))];
+  const sections = ids.map(id => document.querySelector(id)).filter(Boolean);
   if (!sections.length || !('IntersectionObserver' in window)) return;
 
   const observer = new IntersectionObserver(entries => {
