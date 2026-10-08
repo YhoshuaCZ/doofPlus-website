@@ -1,0 +1,144 @@
+/* Breakpoints: tablet (1080px, 900px) and mobile (600px). */
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1080px) {
+  .nav-links {
+    gap: 22px;
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    gap: 48px;
+  }
+
+  .team-card {
+    flex-basis: calc((100% - 20px) / 2);
+  }
+}
+
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .navbar-inner {
+    flex-wrap: wrap;
+  }
+
+  .nav-links,
+  .nav-actions {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar.open .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .navbar.open .nav-actions {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 16px;
+  }
+
+  .nav-links a.active::after {
+    display: none;
+  }
+
+  .page-simple .navbar-inner {
+    flex-wrap: nowrap;
+  }
+
+  .hero-grid,
+  .grid-2,
+  .grid-3,
+  .features-grid,
+  .product-grid,
+  .about-grid,
+  .contact-grid,
+  .demo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .section {
+    padding: 64px 0;
+  }
+
+  .new-banner,
+  .plans-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid > div:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .about-text {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .grid-4,
+  .plan-features,
+  .segment-options,
+  .success-actions,
+  .summary dl {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card {
+    flex-basis: 100%;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .section h2 {
+    font-size: 26px;
+  }
+
+  .floating-card {
+    position: static;
+    margin-top: 12px;
+  }
+
+  .new-banner-actions,
+  .billing-toggle {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .back-link {
+    display: none;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-actions {
+    flex-wrap: wrap;
+  }
+}

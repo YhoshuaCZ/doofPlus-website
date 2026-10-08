@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="DoofPlus centralizes quality documentation, batch traceability, deviations and IoT data for pharmaceutical laboratories.">
+  <meta name="description" content="DoofPlus centralizes quality documentation, batch traceability, deviations and IoT data for pharmaceutical laboratories in one platform.">
+  <meta name="keywords" content="DoofPlus, pharmaceutical quality management, GMP, BPM, DIGEMID, batch traceability, IoT, audit trail, QA/QC, SaaS">
+  <meta name="author" content="IngesCompany">
   <title data-i18n="meta.home">DoofPlus - Pharmaceutical Quality Management</title>
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="public/assets/styles/style.css">
+  <link rel="stylesheet" href="public/assets/styles/main.css">
 </head>
 <body>
+<a class="skip-link" href="#main" data-i18n="nav.skip">Skip to main content</a>
 <!-- Header: brand, section navigation, language switcher and segment access -->
 <header class="navbar">
   <div class="container navbar-inner">
@@ -35,12 +38,12 @@
         <button class="lang-btn" type="button" data-lang="es">ES</button>
       </div>
       <a href="#workspace" class="link-teal" data-i18n="nav.sign_in">Sign in</a>
-      <a href="#workspace" class="btn btn-primary" data-i18n="nav.get_started">Get Started</a>
+      <a href="#workspace" data-magnetic class="btn btn-primary" data-i18n="nav.get_started">Get Started</a>
     </div>
   </div>
 </header>
 
-<main>
+<main id="main">
   <!-- Hero: value proposition -->
   <section class="hero section-dark" id="home">
     <div class="container hero-grid">
@@ -49,8 +52,8 @@
         <h1 data-i18n="hero.title">The Future of Pharmaceutical Quality Management</h1>
         <p class="hero-subtitle" data-i18n="hero.subtitle"></p>
         <div class="hero-buttons">
-          <a href="#workspace" class="btn btn-primary btn-lg" data-i18n="hero.cta_start">Get Started</a>
-          <a href="demo.html" class="btn btn-ghost-light btn-lg" data-i18n="hero.cta_demo">Request a demo</a>
+          <a href="#workspace" data-magnetic class="btn btn-primary btn-lg" data-i18n="hero.cta_start">Get Started</a>
+          <a href="demo.html" data-magnetic class="btn btn-ghost-light btn-lg" data-i18n="hero.cta_demo">Request a demo</a>
         </div>
         <p class="hero-trust" data-i18n="hero.trust"></p>
       </div>
@@ -77,13 +80,13 @@
           <span class="pill" data-i18n="workspace.qa_tag">QA / QC</span>
           <h3 data-i18n="workspace.qa_title">For QA/QC Specialists</h3>
           <p data-i18n="workspace.qa_text"></p>
-          <a href="#" class="btn btn-primary" data-app-segment="qa" data-i18n="workspace.qa_cta">Sign in to the QA/QC environment →</a>
+          <a href="#" data-magnetic class="btn btn-primary" data-app-segment="qa" data-i18n="workspace.qa_cta">Sign in to the QA/QC environment →</a>
         </article>
         <article class="segment-card">
           <span class="pill" data-i18n="workspace.prod_tag">Production</span>
           <h3 data-i18n="workspace.prod_title">For Production Supervisors</h3>
           <p data-i18n="workspace.prod_text"></p>
-          <a href="#" class="btn btn-primary" data-app-segment="production" data-i18n="workspace.prod_cta">Sign in to the Production environment →</a>
+          <a href="#" data-magnetic class="btn btn-primary" data-app-segment="production" data-i18n="workspace.prod_cta">Sign in to the Production environment →</a>
         </article>
       </div>
 
@@ -93,7 +96,7 @@
           <p data-i18n="workspace.new_text"></p>
         </div>
         <div class="new-banner-actions">
-          <a href="#" class="btn btn-primary" data-app-segment="register" data-i18n="workspace.register">Register your laboratory</a>
+          <a href="#" data-magnetic class="btn btn-primary" data-app-segment="register" data-i18n="workspace.register">Register your laboratory</a>
           <a href="demo.html" class="btn btn-outline" data-i18n="workspace.demo">Request a demo</a>
         </div>
       </div>
@@ -326,7 +329,7 @@
             <li data-i18n="plans.standard_f3"></li>
             <li data-i18n="plans.standard_f4"></li>
           </ul>
-          <a href="demo.html" class="btn btn-outline btn-block" data-i18n="plans.standard_cta">Get Standard Lab</a>
+          <a href="demo.html" data-magnetic class="btn btn-outline btn-block" data-i18n="plans.standard_cta">Get Standard Lab</a>
         </article>
         <article class="plan-card plan-featured">
           <div class="plan-title-row"><h3 data-i18n="plans.enterprise_name">Enterprise</h3><span class="plan-badge" data-i18n="plans.enterprise_badge">Most complete</span></div>
@@ -339,7 +342,7 @@
             <li data-i18n="plans.enterprise_f3"></li>
             <li data-i18n="plans.enterprise_f4"></li>
           </ul>
-          <a href="demo.html" class="btn btn-white btn-block" data-i18n="plans.enterprise_cta">Get Enterprise</a>
+          <a href="demo.html" data-magnetic class="btn btn-white btn-block" data-i18n="plans.enterprise_cta">Get Enterprise</a>
         </article>
       </div>
       <p class="plans-note" data-i18n="plans.note"></p>
@@ -430,7 +433,7 @@
             <label class="segment-option"><input type="radio" name="segment" value="production"><span data-i18n="form.prod">Production Supervisor</span></label>
           </div>
         </fieldset>
-        <button type="submit" class="btn btn-primary btn-block" data-i18n="form.submit">Request demo</button>
+        <button type="submit" data-magnetic class="btn btn-primary btn-block" data-i18n="form.submit">Request demo</button>
         <p class="form-note" data-i18n="form.disclaimer"></p>
       </form>
     </div>
@@ -483,8 +486,6 @@
   </div>
 </footer>
 
-<script src="public/assets/scripts/translations/en.js"></script>
-<script src="public/assets/scripts/translations/es.js"></script>
-<script src="public/assets/scripts/main.js"></script>
+<script type="module" src="public/assets/scripts/main.js"></script>
 </body>
 </html>
