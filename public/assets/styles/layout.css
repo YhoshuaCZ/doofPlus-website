@@ -182,22 +182,7 @@
 .grid-2,
 .grid-3,
 .grid-4 {
-  display: grid;
-  gap: 24px;
   margin-top: 40px;
-}
-
-.grid-2 {
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
-}
-
-.grid-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.grid-4 {
-  grid-template-columns: repeat(4, 1fr);
 }
 
 .pill {
@@ -221,8 +206,6 @@
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.6fr repeat(4, 1fr);
-  gap: 32px;
   padding-bottom: 32px;
   border-bottom: 1px solid var(--navy-soft);
 }

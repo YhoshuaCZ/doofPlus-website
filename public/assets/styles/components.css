@@ -90,8 +90,6 @@
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 120px;
   align-items: start;
 }
 

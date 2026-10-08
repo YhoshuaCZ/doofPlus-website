@@ -1,0 +1,59 @@
+/*
+ * 12-column fluid grid of the Web Style Guide (section 4.1.2).
+ * Every layout of the site is a 12-column grid and each block spans a number of columns:
+ * desktop uses the spans below, tablet (≤1080px) adapts them and mobile (≤900px)
+ * stacks every block in one column (see responsive.css).
+ */
+
+.grid-12,
+.hero-grid,
+.grid-2,
+.grid-3,
+.grid-4,
+.features-grid,
+.product-grid,
+.about-grid,
+.team-grid,
+.contact-grid,
+.demo-grid,
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
+  column-gap: var(--grid-gutter);
+  row-gap: var(--grid-row-gap);
+}
+
+/* Equal columns */
+.grid-2 > * { grid-column: span 6; }
+.grid-3 > * { grid-column: span 4; }
+.grid-4 > * { grid-column: span 3; }
+
+/* Hero: text 6 columns, image 6 columns */
+.hero-grid > * { grid-column: span 6; }
+
+/* Features: preview panel 5 columns, accordion 7 columns */
+.features-grid > :first-child { grid-column: span 5; }
+.features-grid > :last-child { grid-column: span 7; }
+
+/* About the product: text 5 columns, video 7 columns */
+.product-grid > :first-child { grid-column: span 5; }
+.product-grid > :last-child { grid-column: span 7; }
+
+/* About us: text 6 columns, mission and vision 6 columns */
+.about-grid > * { grid-column: span 6; }
+
+/* Team: three cards of 4 columns, the last two centered (columns 3-6 and 7-10) */
+.team-grid > * { grid-column: span 4; }
+.team-grid > :nth-child(4) { grid-column: 3 / span 4; }
+
+/* Contact: text 5 columns, form on columns 7-12 */
+.contact-grid > :first-child { grid-column: span 5; }
+.contact-grid > :last-child { grid-column: 7 / span 6; }
+
+/* Demo request: summary 5 columns, form 7 columns */
+.demo-grid > :first-child { grid-column: span 5; }
+.demo-grid > :last-child { grid-column: span 7; }
+
+/* Footer: brand 4 columns, four link groups of 2 columns */
+.footer-grid > * { grid-column: span 2; }
+.footer-grid > :first-child { grid-column: span 4; }

@@ -32,7 +32,8 @@ public/assets/
     ├── main.css                # Imports the modules below in cascade order
     ├── variables.css           # Design tokens
     ├── reset.css               # Base element styles
-    ├── layout.css              # Container, navbar, sections, grids and footer
+    ├── layout.css              # Container, navbar, sections and footer
+    ├── grid.css                # 12-column fluid grid and the column span of each block
     ├── components.css          # Buttons, links, forms and skip link
     ├── sections.css            # Sections of index.html
     ├── pages.css               # demo.html, terms.html and privacy.html
@@ -56,6 +57,16 @@ python -m http.server 8080
 
 - `WEB_APP_URL`: base URL of the DoofPlus Web Application. The QA/QC and Production access buttons open `/login?segment=qa` and `/login?segment=production`; until it is set, they lead to the *Choose your workspace* section.
 - `VIDEO_URL`: YouTube embed URL of the About-the-Product video.
+
+## Layout grid
+
+Following the Web Style Guide (section 4.1.2), every layout is a **12-column fluid grid** (`grid.css`) with gutters on the 8-point grid. The number of columns never changes; each block spans a number of them:
+
+| Screen | Gutter | Example spans |
+|--------|--------|---------------|
+| Desktop (> 1080px) | 32px | Hero 6 + 6 · Services 3 + 3 + 3 + 3 · Features 5 + 7 · Team 4 + 4 + 4 · Footer 4 + 2 + 2 + 2 + 2 |
+| Tablet (≤ 1080px) | 24px | Services 6 + 6 · Team 6 + 6 · Footer 12, then 3 + 3 + 3 + 3 |
+| Mobile (≤ 900px) | 16px | Every block spans 12 columns (one column) |
 
 ## Accessibility and SEO
 
