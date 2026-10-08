@@ -20,11 +20,7 @@
   <div class="container navbar-inner">
     <a href="#home" class="brand"><img src="public/assets/images/doofplus-logo.png" alt="DoofPlus" class="brand-logo"></a>
 
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" data-i18n-aria="nav.menu">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav class="nav-links" id="main-nav">
+    <nav class="nav-links" aria-label="Main">
       <a href="#home" class="active" data-i18n="nav.home">Home</a>
       <a href="#features" data-i18n="nav.features">Features</a>
       <a href="#benefits" data-i18n="nav.benefits">Benefits</a>
@@ -37,8 +33,29 @@
         <button class="lang-btn active" type="button" data-lang="en">EN</button>
         <button class="lang-btn" type="button" data-lang="es">ES</button>
       </div>
-      <a href="#workspace" class="link-teal" data-i18n="nav.sign_in">Sign in</a>
-      <a href="#workspace" data-magnetic class="btn btn-primary" data-i18n="nav.get_started">Get Started</a>
+      <a href="#workspace" class="link-teal desktop-only" data-i18n="nav.sign_in">Sign in</a>
+      <a href="#workspace" data-magnetic class="btn btn-primary desktop-only" data-i18n="nav.get_started">Get Started</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-i18n-aria="nav.menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu (≤ 900px) -->
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav class="mobile-links" aria-label="Main">
+      <a href="#home" data-i18n="nav.home">Home</a>
+      <a href="#features" data-i18n="nav.features">Features</a>
+      <a href="#benefits" data-i18n="nav.benefits">Benefits</a>
+      <a href="#about" data-i18n="nav.about">About Us</a>
+      <a href="#plans" data-i18n="nav.plans">Plans</a>
+    </nav>
+    <a href="#workspace" class="mobile-sign-in" data-i18n="nav.sign_in">Sign in</a>
+    <a href="#workspace" class="btn btn-primary btn-block btn-lg" data-i18n="nav.get_started">Get Started</a>
+    <a href="demo.html" class="btn btn-ghost-light btn-block btn-lg" data-i18n="hero.cta_demo">Request a demo</a>
+    <div class="lang-switch lang-switch-dark" role="group" aria-label="Language">
+      <button class="lang-btn" type="button" data-lang="en">EN</button>
+      <button class="lang-btn" type="button" data-lang="es">ES</button>
     </div>
   </div>
 </header>
@@ -212,10 +229,19 @@
   <!-- About the Product video -->
   <section class="section" id="product">
     <div class="container product-grid">
-      <div>
+      <div class="product-intro">
         <span class="overline" data-i18n="product.overline">About the product</span>
         <h2 data-i18n="product.title">See DoofPlus in action</h2>
         <p class="section-subtitle" data-i18n="product.subtitle"></p>
+      </div>
+      <div class="video-player">
+        <img src="public/assets/images/pharmaceutical-laboratory.jpg" alt="">
+        <span class="video-title" data-i18n="product.player_title">DoofPlus · About the Product</span>
+        <button class="play-btn" type="button" data-video-play data-i18n-aria="product.play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+        <span class="video-duration">3:00</span>
+        <span class="video-progress" aria-hidden="true"></span>
+      </div>
+      <div class="product-details">
         <ul class="chapters">
           <li><strong>00:00</strong> <span data-i18n="product.ch1"></span></li>
           <li><strong>00:40</strong> <span data-i18n="product.ch2"></span></li>
@@ -224,13 +250,6 @@
         </ul>
         <a href="#" class="link-teal" data-video-link data-i18n="product.youtube">Can't play the video? Watch it on YouTube →</a>
         <p class="video-soon" hidden data-i18n="product.soon"></p>
-      </div>
-      <div class="video-player">
-        <img src="public/assets/images/pharmaceutical-laboratory.jpg" alt="">
-        <span class="video-title" data-i18n="product.player_title">DoofPlus · About the Product</span>
-        <button class="play-btn" type="button" data-video-play data-i18n-aria="product.play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
-        <span class="video-duration">3:00</span>
-        <span class="video-progress" aria-hidden="true"></span>
       </div>
     </div>
   </section>
@@ -409,11 +428,10 @@
   <!-- Contact: demo request -->
   <section class="section section-teal" id="contact">
     <div class="container contact-grid">
-      <div>
+      <div class="contact-intro">
         <span class="overline overline-light" data-i18n="contact.overline">Contact</span>
         <h2 data-i18n="contact.title"></h2>
         <p class="contact-text" data-i18n="contact.text"></p>
-        <p class="contact-info" data-i18n="contact.info"></p>
       </div>
       <form class="form-card demo-form" novalidate data-redirect="demo.html">
         <div class="form-error" hidden data-i18n="form.error_banner"></div>
@@ -436,6 +454,7 @@
         <button type="submit" data-magnetic class="btn btn-primary btn-block" data-i18n="form.submit">Request demo</button>
         <p class="form-note" data-i18n="form.disclaimer"></p>
       </form>
+      <p class="contact-info" data-i18n="contact.info"></p>
     </div>
   </section>
 </main>
