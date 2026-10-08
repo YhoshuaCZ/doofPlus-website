@@ -23,4 +23,9 @@
   --radius-pill: 999px;
   --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
   --container: 1200px;
+
+  /* 12-column fluid grid (Web Style Guide 4.1.2) with gutters on the 8-point grid. */
+  --grid-columns: 12;
+  --grid-gutter: 32px;
+  --grid-row-gap: 24px;
 }

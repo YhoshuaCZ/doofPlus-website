@@ -8,8 +8,6 @@
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 56px;
   align-items: center;
 }
 
@@ -186,8 +184,6 @@
 
 .features-grid {
   display: grid;
-  grid-template-columns: 0.85fr 1.1fr;
-  gap: 36px;
   align-items: start;
   margin-top: 40px;
 }
@@ -346,8 +342,6 @@
 
 .product-grid {
   display: grid;
-  grid-template-columns: 0.75fr 1.1fr;
-  gap: 72px;
   align-items: center;
 }
 
@@ -473,8 +467,6 @@
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
 }
 
 .about-text {
@@ -527,15 +519,10 @@
 /* ---------- Team ---------- */
 
 .team-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
   margin-top: 40px;
 }
 
 .team-card {
-  flex: 0 1 calc((100% - 40px) / 3);
   padding: 20px 20px 36px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
