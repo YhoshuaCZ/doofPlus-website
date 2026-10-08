@@ -1,65 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Meta tags for responsive design and character encoding -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DoofPlus - Pharmaceutical Workspace</title>
-  <link rel="stylesheet" href="public/assets/styles/style.css">
+  <meta name="description" content="DoofPlus centralizes quality documentation, batch traceability, deviations and IoT data for pharmaceutical laboratories.">
+  <title data-i18n="meta.home">DoofPlus - Pharmaceutical Quality Management</title>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="public/assets/styles/style.css">
 </head>
 <body>
-<!-- Header section with navigation and language switcher -->
+<!-- Header: brand, section navigation, language switcher and segment access -->
 <header class="navbar">
-  <div class="logo">DoofPlus</div>
-  <nav class="nav-links">
-    <a href="#" data-i18n="nav.platform"></a>
-    <a href="#" data-i18n="nav.role"></a>
-    <a href="#" data-i18n="nav.security"></a>
-    <a href="#" data-i18n="nav.resources"></a>
-  </nav>
-  <div class="nav-actions">
-    <div class="lang-switch">
-      <button class="lang-btn active" data-lang="en">EN</button>
-      <span class="separator">|</span>
-      <button class="lang-btn" data-lang="es">ES</button>
+  <div class="container navbar-inner">
+    <a href="#home" class="brand"><img src="public/assets/images/doofplus-logo.png" alt="DoofPlus" class="brand-logo"></a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" data-i18n-aria="nav.menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-links" id="main-nav">
+      <a href="#home" class="active" data-i18n="nav.home">Home</a>
+      <a href="#features" data-i18n="nav.features">Features</a>
+      <a href="#benefits" data-i18n="nav.benefits">Benefits</a>
+      <a href="#about" data-i18n="nav.about">About Us</a>
+      <a href="#plans" data-i18n="nav.plans">Plans</a>
+    </nav>
+
+    <div class="nav-actions">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button class="lang-btn active" type="button" data-lang="en">EN</button>
+        <button class="lang-btn" type="button" data-lang="es">ES</button>
+      </div>
+      <a href="#workspace" class="link-teal" data-i18n="nav.sign_in">Sign in</a>
+      <a href="#workspace" class="btn btn-primary" data-i18n="nav.get_started">Get Started</a>
     </div>
-    <button class="btn btn-teal" data-i18n="nav.qa_access"></button>
-    <button class="btn btn-teal" data-i18n="nav.prod_access"></button>
   </div>
 </header>
 
 <main>
-  <section class="hero">
-    <div class="hero-content">
-      <span class="overline" data-i18n="hero.overline"></span>
-
-      <!-- TODO: Implement dynamic content -->
-
-      <h1 data-i18n="hero.title"></h1>
-      <p class="subtitle" data-i18n="hero.subtitle"></p>
-
-      <div class="hero-buttons">
-        <button class="btn-teal-large" data-i18n="hero.btn_signin"></button>
-        <button class="btn-outline" data-i18n="hero.btn_capabilities"></button>
+  <!-- Hero: value proposition -->
+  <section class="hero section-dark" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="overline overline-light" data-i18n="hero.overline">GMP · DIGEMID · IoT · Audit trail</span>
+        <h1 data-i18n="hero.title">The Future of Pharmaceutical Quality Management</h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle"></p>
+        <div class="hero-buttons">
+          <a href="#workspace" class="btn btn-primary btn-lg" data-i18n="hero.cta_start">Get Started</a>
+          <a href="demo.html" class="btn btn-ghost-light btn-lg" data-i18n="hero.cta_demo">Request a demo</a>
+        </div>
+        <p class="hero-trust" data-i18n="hero.trust"></p>
       </div>
 
-      <p class="hero-footer" data-i18n="hero.footer"></p>
-    </div>
-
-    <div class="hero-visual">
-      <div class="image-wrapper">
-        <img src="public/assets/images/pharmaceutical-laboratory.jpg" alt="Pharmaceutical Laboratory" class="main-img">
-
+      <div class="hero-visual">
+        <img src="public/assets/images/pharmaceutical-laboratory.jpg" alt="" data-i18n-alt="hero.image_alt" class="hero-img">
         <div class="floating-card">
-          <span class="status-badge" data-i18n="hero.badge"></span>
+          <span class="status-badge" data-i18n="hero.badge">Ready for release</span>
           <p data-i18n="hero.badge_text"></p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Segment access to the Web Application -->
+  <section class="section section-mint" id="workspace">
+    <div class="container">
+      <span class="overline" data-i18n="workspace.overline">Get started</span>
+      <h2 data-i18n="workspace.title">Choose your workspace</h2>
+      <p class="section-subtitle" data-i18n="workspace.subtitle"></p>
+
+      <div class="grid-2">
+        <article class="segment-card">
+          <span class="pill" data-i18n="workspace.qa_tag">QA / QC</span>
+          <h3 data-i18n="workspace.qa_title">For QA/QC Specialists</h3>
+          <p data-i18n="workspace.qa_text"></p>
+          <a href="#" class="btn btn-primary" data-app-segment="qa" data-i18n="workspace.qa_cta">Sign in to the QA/QC environment →</a>
+        </article>
+        <article class="segment-card">
+          <span class="pill" data-i18n="workspace.prod_tag">Production</span>
+          <h3 data-i18n="workspace.prod_title">For Production Supervisors</h3>
+          <p data-i18n="workspace.prod_text"></p>
+          <a href="#" class="btn btn-primary" data-app-segment="production" data-i18n="workspace.prod_cta">Sign in to the Production environment →</a>
+        </article>
+      </div>
+
+      <div class="new-banner">
+        <div>
+          <h3 data-i18n="workspace.new_title">New to DoofPlus?</h3>
+          <p data-i18n="workspace.new_text"></p>
+        </div>
+        <div class="new-banner-actions">
+          <a href="#" class="btn btn-primary" data-app-segment="register" data-i18n="workspace.register">Register your laboratory</a>
+          <a href="demo.html" class="btn btn-outline" data-i18n="workspace.demo">Request a demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="container">
+      <span class="overline" data-i18n="services.overline">What we offer</span>
+      <h2 data-i18n="services.title">Our services</h2>
+      <p class="section-subtitle" data-i18n="services.subtitle"></p>
+
+      <div class="grid-4">
+        <article class="service-card">
+          <span class="icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M8.5 15.5a5 5 0 0 1 0-7M15.5 8.5a5 5 0 0 1 0 7M5.6 18.4a9 9 0 0 1 0-12.8M18.4 5.6a9 9 0 0 1 0 12.8"/></svg>
+          </span>
+          <h3 data-i18n="services.iot_title">Real-Time IoT Monitoring</h3>
+          <p data-i18n="services.iot_text"></p>
+          <a href="#features" class="link-teal" data-feature="0" data-i18n="services.learn_more">Learn more →</a>
+        </article>
+        <article class="service-card">
+          <span class="icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+          </span>
+          <h3 data-i18n="services.gmp_title">Automated GMP Compliance</h3>
+          <p data-i18n="services.gmp_text"></p>
+          <a href="#features" class="link-teal" data-feature="1" data-i18n="services.learn_more">Learn more →</a>
+        </article>
+        <article class="service-card">
+          <span class="icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="15" y="9" width="6" height="6" rx="1"/><rect x="3" y="15" width="6" height="6" rx="1"/><path d="M9 6h3v12H9M12 12h3"/></svg>
+          </span>
+          <h3 data-i18n="services.trace_title">Immutable Traceability</h3>
+          <p data-i18n="services.trace_text"></p>
+          <a href="#features" class="link-teal" data-feature="2" data-i18n="services.learn_more">Learn more →</a>
+        </article>
+        <article class="service-card">
+          <span class="icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 21h10M6 21v-4l4-6 4 2 4-6"/><circle cx="10" cy="11" r="1.5"/><circle cx="18" cy="7" r="1.5"/></svg>
+          </span>
+          <h3 data-i18n="services.batch_title">Digital Batch Management</h3>
+          <p data-i18n="services.batch_text"></p>
+          <a href="#features" class="link-teal" data-feature="3" data-i18n="services.learn_more">Learn more →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features: accordion with a preview panel -->
+  <section class="section section-gray" id="features">
+    <div class="container">
+      <span class="overline" data-i18n="features.overline">Features</span>
+      <h2 data-i18n="features.title">Everything your quality team needs, connected</h2>
+      <p class="section-subtitle" data-i18n="features.subtitle"></p>
+
+      <div class="features-grid">
+        <div class="feature-panels">
+          <div class="feature-panel active" data-panel="0">
+            <h3 data-i18n="features.p1_title"></h3>
+            <p class="panel-subtitle" data-i18n="features.p1_subtitle"></p>
+            <div class="reading"><div><span data-i18n="features.p1_r1"></span><strong>22.4 °C</strong></div><em class="ok" data-i18n="features.s_within"></em></div>
+            <div class="reading"><div><span data-i18n="features.p1_r2"></span><strong>48 %</strong></div><em class="ok" data-i18n="features.s_within"></em></div>
+            <div class="reading"><div><span data-i18n="features.p1_r3"></span><strong>11.8 Pa</strong></div><em class="warn" data-i18n="features.s_near"></em></div>
+            <div class="bars" aria-hidden="true"><i style="height:30%"></i><i style="height:45%"></i><i style="height:40%"></i><i style="height:60%"></i><i style="height:50%"></i><i style="height:70%"></i><i style="height:55%"></i><i style="height:75%"></i><i style="height:60%"></i><i style="height:50%"></i><i style="height:65%"></i><i style="height:80%"></i></div>
+          </div>
+          <div class="feature-panel" data-panel="1">
+            <h3 data-i18n="features.p2_title"></h3>
+            <p class="panel-subtitle" data-i18n="features.p2_subtitle"></p>
+            <div class="reading"><div><span data-i18n="features.p2_r1"></span><strong>MF-PCT-500 v3</strong></div><em class="ok" data-i18n="features.s_signed"></em></div>
+            <div class="reading"><div><span data-i18n="features.p2_r2"></span><strong>12 / 12</strong></div><em class="ok" data-i18n="features.s_done"></em></div>
+            <div class="reading"><div><span data-i18n="features.p2_r3"></span><strong>2 / 2</strong></div><em class="ok" data-i18n="features.s_done"></em></div>
+          </div>
+          <div class="feature-panel" data-panel="2">
+            <h3 data-i18n="features.p3_title"></h3>
+            <p class="panel-subtitle" data-i18n="features.p3_subtitle"></p>
+            <div class="reading"><div><span data-i18n="features.p3_r1"></span><strong data-i18n="features.s_major"></strong></div><em class="warn" data-i18n="features.s_alert"></em></div>
+            <div class="reading"><div><span data-i18n="features.p3_r2"></span><strong>4.2 s</strong></div><em class="ok">&lt; 5 s</em></div>
+            <div class="reading"><div><span data-i18n="features.p3_r3"></span><strong data-i18n="features.s_qa"></strong></div><em class="ok">CAPA-0198</em></div>
+          </div>
+          <div class="feature-panel" data-panel="3">
+            <h3 data-i18n="features.p4_title"></h3>
+            <p class="panel-subtitle" data-i18n="features.p4_subtitle"></p>
+            <div class="reading"><div><span data-i18n="features.p4_r1"></span><strong>38</strong></div><em class="ok" data-i18n="features.s_up"></em></div>
+            <div class="reading"><div><span data-i18n="features.p4_r2"></span><strong>3</strong></div><em class="warn" data-i18n="features.s_watch"></em></div>
+            <div class="reading"><div><span data-i18n="features.p4_r3"></span><strong>94 %</strong></div><em class="ok" data-i18n="features.s_target"></em></div>
+          </div>
+        </div>
+
+        <div class="accordion" data-accordion="features">
+          <div class="accordion-item open">
+            <button class="accordion-header" type="button" aria-expanded="true"><span data-i18n="features.f1_title"></span><i class="accordion-icon" aria-hidden="true"></i></button>
+            <div class="accordion-body"><p data-i18n="features.f1_text"></p></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false"><span data-i18n="features.f2_title"></span><i class="accordion-icon" aria-hidden="true"></i></button>
+            <div class="accordion-body"><p data-i18n="features.f2_text"></p></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false"><span data-i18n="features.f3_title"></span><i class="accordion-icon" aria-hidden="true"></i></button>
+            <div class="accordion-body"><p data-i18n="features.f3_text"></p></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false"><span data-i18n="features.f4_title"></span><i class="accordion-icon" aria-hidden="true"></i></button>
+            <div class="accordion-body"><p data-i18n="features.f4_text"></p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About the Product video -->
+  <section class="section" id="product">
+    <div class="container product-grid">
+      <div>
+        <span class="overline" data-i18n="product.overline">About the product</span>
+        <h2 data-i18n="product.title">See DoofPlus in action</h2>
+        <p class="section-subtitle" data-i18n="product.subtitle"></p>
+        <ul class="chapters">
+          <li><strong>00:00</strong> <span data-i18n="product.ch1"></span></li>
+          <li><strong>00:40</strong> <span data-i18n="product.ch2"></span></li>
+          <li><strong>01:30</strong> <span data-i18n="product.ch3"></span></li>
+          <li><strong>02:20</strong> <span data-i18n="product.ch4"></span></li>
+        </ul>
+        <a href="#" class="link-teal" data-video-link data-i18n="product.youtube">Can't play the video? Watch it on YouTube →</a>
+        <p class="video-soon" hidden data-i18n="product.soon"></p>
+      </div>
+      <div class="video-player">
+        <img src="public/assets/images/pharmaceutical-laboratory.jpg" alt="">
+        <span class="video-title" data-i18n="product.player_title">DoofPlus · About the Product</span>
+        <button class="play-btn" type="button" data-video-play data-i18n-aria="product.play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+        <span class="video-duration">3:00</span>
+        <span class="video-progress" aria-hidden="true"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="section section-dark" id="benefits">
+    <div class="container">
+      <span class="overline overline-light" data-i18n="benefits.overline">Benefits</span>
+      <h2 data-i18n="benefits.title">Why laboratories choose DoofPlus</h2>
+      <p class="section-subtitle" data-i18n="benefits.subtitle"></p>
+      <div class="grid-4">
+        <article class="benefit-card"><strong class="benefit-value">80%</strong><h3 data-i18n="benefits.b1_title"></h3><p data-i18n="benefits.b1_text"></p></article>
+        <article class="benefit-card"><strong class="benefit-value">0</strong><h3 data-i18n="benefits.b2_title"></h3><p data-i18n="benefits.b2_text"></p></article>
+        <article class="benefit-card"><strong class="benefit-value">&lt; 5 s</strong><h3 data-i18n="benefits.b3_title"></h3><p data-i18n="benefits.b3_text"></p></article>
+        <article class="benefit-card"><strong class="benefit-value">US$0</strong><h3 data-i18n="benefits.b4_title"></h3><p data-i18n="benefits.b4_text"></p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About us -->
+  <section class="section section-mint" id="about">
+    <div class="container about-grid">
+      <div>
+        <span class="overline" data-i18n="about.overline">About us</span>
+        <h2 data-i18n="about.title"></h2>
+        <p class="about-text" data-i18n="about.text"></p>
+        <ul class="tags">
+          <li data-i18n="about.tag1"></li>
+          <li data-i18n="about.tag2"></li>
+          <li data-i18n="about.tag3"></li>
+          <li data-i18n="about.tag4"></li>
+        </ul>
+      </div>
+      <div class="about-cards">
+        <article class="info-card"><h3 data-i18n="about.mission_title"></h3><p data-i18n="about.mission_text"></p></article>
+        <article class="info-card"><h3 data-i18n="about.vision_title"></h3><p data-i18n="about.vision_text"></p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="section" id="team">
+    <div class="container">
+      <span class="overline" data-i18n="team.overline">Our team</span>
+      <h2 data-i18n="team.title">The people behind DoofPlus</h2>
+      <p class="section-subtitle" data-i18n="team.subtitle"></p>
+      <div class="team-grid">
+        <article class="team-card">
+          <div class="team-head"><img src="public/assets/images/team/marcelo.jpg" alt="Marcelo Angulo"><div><h3>Marcelo Angulo</h3><span data-i18n="team.role"></span></div></div>
+          <p data-i18n="team.marcelo"></p>
+        </article>
+        <article class="team-card">
+          <div class="team-head"><img src="public/assets/images/team/yhoshua.jpg" alt="Yhoshua Cobades"><div><h3>Yhoshua Cobades</h3><span data-i18n="team.role"></span></div></div>
+          <p data-i18n="team.yhoshua"></p>
+        </article>
+        <article class="team-card">
+          <div class="team-head"><img src="public/assets/images/team/ricardo.jpg" alt="Ricardo Flores"><div><h3>Ricardo Flores</h3><span data-i18n="team.role"></span></div></div>
+          <p data-i18n="team.ricardo"></p>
+        </article>
+        <article class="team-card">
+          <div class="team-head"><img src="public/assets/images/team/nestor.jpg" alt="Nestor Rojas"><div><h3>Nestor Rojas</h3><span data-i18n="team.role"></span></div></div>
+          <p data-i18n="team.nestor"></p>
+        </article>
+        <article class="team-card">
+          <div class="team-head"><img src="public/assets/images/team/rodolfo.jpg" alt="Rodolfo Zavaleta"><div><h3>Rodolfo Zavaleta</h3><span data-i18n="team.role"></span></div></div>
+          <p data-i18n="team.rodolfo"></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plans with monthly / annual billing -->
+  <section class="section section-gray" id="plans">
+    <div class="container">
+      <div class="plans-head">
+        <div>
+          <span class="overline" data-i18n="plans.overline">Plans</span>
+          <h2 data-i18n="plans.title">Simple plans for every laboratory</h2>
+          <p class="section-subtitle" data-i18n="plans.subtitle"></p>
+        </div>
+        <div class="billing-toggle" role="group">
+          <button type="button" class="active" data-billing="monthly" data-i18n="plans.monthly">Monthly</button>
+          <button type="button" data-billing="annual" data-i18n="plans.annually">Annually · 2 months free</button>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <article class="plan-card">
+          <h3 data-i18n="plans.standard_name">Standard Lab</h3>
+          <p class="plan-desc" data-i18n="plans.standard_desc"></p>
+          <p class="price"><strong data-price-monthly="US$199" data-price-annual="US$1,990">US$199</strong> <span data-period></span></p>
+          <p class="price-note" data-note-monthly="plans.standard_note_monthly" data-note-annual="plans.standard_note_annual"></p>
+          <ul class="plan-features">
+            <li data-i18n="plans.standard_f1"></li>
+            <li data-i18n="plans.standard_f2"></li>
+            <li data-i18n="plans.standard_f3"></li>
+            <li data-i18n="plans.standard_f4"></li>
+          </ul>
+          <a href="demo.html" class="btn btn-outline btn-block" data-i18n="plans.standard_cta">Get Standard Lab</a>
+        </article>
+        <article class="plan-card plan-featured">
+          <div class="plan-title-row"><h3 data-i18n="plans.enterprise_name">Enterprise</h3><span class="plan-badge" data-i18n="plans.enterprise_badge">Most complete</span></div>
+          <p class="plan-desc" data-i18n="plans.enterprise_desc"></p>
+          <p class="price"><strong data-price-monthly="US$599" data-price-annual="US$5,990">US$599</strong> <span data-period></span></p>
+          <p class="price-note" data-note-monthly="plans.enterprise_note_monthly" data-note-annual="plans.enterprise_note_annual"></p>
+          <ul class="plan-features">
+            <li data-i18n="plans.enterprise_f1"></li>
+            <li data-i18n="plans.enterprise_f2"></li>
+            <li data-i18n="plans.enterprise_f3"></li>
+            <li data-i18n="plans.enterprise_f4"></li>
+          </ul>
+          <a href="demo.html" class="btn btn-white btn-block" data-i18n="plans.enterprise_cta">Get Enterprise</a>
+        </article>
+      </div>
+      <p class="plans-note" data-i18n="plans.note"></p>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <span class="overline" data-i18n="testimonials.overline">Testimonials</span>
+      <h2 data-i18n="testimonials.title">What our clients think</h2>
+      <div class="grid-3">
+        <figure class="testimonial">
+          <span class="stars" role="img" data-i18n-aria="testimonials.rating5">★★★★★</span>
+          <blockquote data-i18n="testimonials.t1_text"></blockquote>
+          <figcaption><strong>Dr. M. Vargas</strong><span data-i18n="testimonials.t1_role"></span></figcaption>
+        </figure>
+        <figure class="testimonial">
+          <span class="stars" role="img" data-i18n-aria="testimonials.rating5">★★★★★</span>
+          <blockquote data-i18n="testimonials.t2_text"></blockquote>
+          <figcaption><strong>Ing. R. Flores</strong><span data-i18n="testimonials.t2_role"></span></figcaption>
+        </figure>
+        <figure class="testimonial">
+          <span class="stars" role="img" data-i18n-aria="testimonials.rating4">★★★★☆</span>
+          <blockquote data-i18n="testimonials.t3_text"></blockquote>
+          <figcaption><strong>Q.F. L. Castro</strong><span data-i18n="testimonials.t3_role"></span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-gray" id="faq">
+    <div class="container">
+      <span class="overline" data-i18n="faq.overline">FAQ</span>
+      <h2 data-i18n="faq.title">Frequently asked questions</h2>
+      <p class="section-subtitle" data-i18n="faq.subtitle"></p>
+      <div class="accordion" data-accordion="faq">
+        <div class="accordion-item open">
+          <button class="accordion-header" type="button" aria-expanded="true"><span data-i18n="faq.q1"></span><i class="accordion-icon" aria-hidden="true"></i></button>
+          <div class="accordion-body"><p data-i18n="faq.a1"></p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" type="button" aria-expanded="false"><span data-i18n="faq.q2"></span><i class="accordion-icon" aria-hidden="true"></i></button>
+          <div class="accordion-body"><p data-i18n="faq.a2"></p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" type="button" aria-expanded="false"><span data-i18n="faq.q3"></span><i class="accordion-icon" aria-hidden="true"></i></button>
+          <div class="accordion-body"><p data-i18n="faq.a3"></p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" type="button" aria-expanded="false"><span data-i18n="faq.q4"></span><i class="accordion-icon" aria-hidden="true"></i></button>
+          <div class="accordion-body"><p data-i18n="faq.a4"></p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" type="button" aria-expanded="false"><span data-i18n="faq.q5"></span><i class="accordion-icon" aria-hidden="true"></i></button>
+          <div class="accordion-body"><p data-i18n="faq.a5"></p></div>
+        </div>
+      </div>
+      <p class="faq-more"><strong data-i18n="faq.more"></strong> <a href="#contact" class="link-teal" data-i18n="faq.contact"></a></p>
+    </div>
+  </section>
+
+  <!-- Contact: demo request -->
+  <section class="section section-teal" id="contact">
+    <div class="container contact-grid">
+      <div>
+        <span class="overline overline-light" data-i18n="contact.overline">Contact</span>
+        <h2 data-i18n="contact.title"></h2>
+        <p class="contact-text" data-i18n="contact.text"></p>
+        <p class="contact-info" data-i18n="contact.info"></p>
+      </div>
+      <form class="form-card demo-form" novalidate data-redirect="demo.html">
+        <div class="form-error" hidden data-i18n="form.error_banner"></div>
+        <label class="field">
+          <span><span data-i18n="form.email">Work email</span> *</span>
+          <input type="email" name="email" autocomplete="email" required data-i18n-placeholder="form.email_ph">
+          <small class="field-error" hidden data-i18n="form.error_email"></small>
+        </label>
+        <label class="field">
+          <span><span data-i18n="form.lab">Laboratory name</span> <em data-i18n="form.optional">(optional)</em></span>
+          <input type="text" name="lab" autocomplete="organization" data-i18n-placeholder="form.lab_ph">
+        </label>
+        <fieldset class="field">
+          <legend><span data-i18n="form.segment">I am a</span> *</legend>
+          <div class="segment-options">
+            <label class="segment-option"><input type="radio" name="segment" value="qa" checked><span data-i18n="form.qa">QA/QC Specialist</span></label>
+            <label class="segment-option"><input type="radio" name="segment" value="production"><span data-i18n="form.prod">Production Supervisor</span></label>
+          </div>
+        </fieldset>
+        <button type="submit" class="btn btn-primary btn-block" data-i18n="form.submit">Request demo</button>
+        <p class="form-note" data-i18n="form.disclaimer"></p>
+      </form>
+    </div>
+  </section>
 </main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="public/assets/images/doofplus-logo.png" alt="DoofPlus" class="brand-logo footer-logo">
+        <p data-i18n="footer.tagline"></p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.product">Product</h4>
+        <a href="#features" data-i18n="footer.features"></a>
+        <a href="#plans" data-i18n="footer.pricing"></a>
+        <a href="#product" data-i18n="footer.how"></a>
+      </div>
+      <div>
+        <h4 data-i18n="footer.company">Company</h4>
+        <a href="#about" data-i18n="footer.about"></a>
+        <a href="#team" data-i18n="footer.team"></a>
+        <a href="#faq" data-i18n="footer.faq"></a>
+      </div>
+      <div>
+        <h4 data-i18n="footer.contact">Contact</h4>
+        <a href="mailto:doofplus.inges@gmail.com">doofplus.inges@gmail.com</a>
+        <a href="tel:+5112345678">+51 (1) 234-5678</a>
+        <span data-i18n="footer.location">Lima, Perú</span>
+      </div>
+      <div>
+        <h4 data-i18n="footer.legal">Legal</h4>
+        <a href="terms.html" class="underline" data-i18n="footer.terms"></a>
+        <a href="privacy.html" class="underline" data-i18n="footer.privacy"></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footer.copyright"></p>
+      <div class="footer-actions">
+        <div class="lang-switch lang-switch-dark" role="group" aria-label="Language">
+          <button class="lang-btn active" type="button" data-lang="en">EN</button>
+          <button class="lang-btn" type="button" data-lang="es">ES</button>
+        </div>
+        <a href="#" class="btn btn-dark" data-app-segment="qa" data-i18n="footer.qa_access">QA/QC Access</a>
+        <a href="#" class="btn btn-dark" data-app-segment="production" data-i18n="footer.prod_access">Production Access</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
 <script src="public/assets/scripts/translations/en.js"></script>
 <script src="public/assets/scripts/translations/es.js"></script>
