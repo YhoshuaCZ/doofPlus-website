@@ -1,0 +1,26 @@
+/* Design tokens of DoofPlus (colors, radius, shadows and layout width). */
+
+:root {
+  --navy: #0f172a;
+  --navy-soft: #1e293b;
+  --navy-line: #334155;
+  --teal: #0f766e;
+  --teal-dark: #115e59;
+  --teal-bright: #2dd4bf;
+  --teal-pale: #ccfbf1;
+  --mint: #f0fdfa;
+  --gray-bg: #f8fafc;
+  --border: #e2e8f0;
+  --text: #0f172a;
+  --muted: #64748b;
+  --muted-light: #94a3b8;
+  --amber: #f59e0b;
+  --danger: #dc2626;
+  --danger-bg: #fef2f2;
+  --success-bg: #ecfdf5;
+  --success: #166534;
+  --radius: 14px;
+  --radius-pill: 999px;
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --container: 1200px;
+}

@@ -17,18 +17,34 @@ Built with HTML5, CSS3 and JavaScript, bilingual (English by default and Latin A
 
 ```text
 public/assets/
-├── images/                 # Logo, hero image and team photos
+├── cursors/                    # Custom cursors (default, pointer and text)
+├── i18n/                       # en.json and es.json (same keys in both files)
+├── images/                     # Logo, hero image and team photos
 ├── scripts/
-│   ├── main.js             # Translations, navigation, accordions, plans and demo requests
-│   └── translations/       # en.js and es.js (same keys in both files)
-└── styles/style.css        # Design tokens, components and responsive rules
+│   ├── main.js                 # Entry point (ES module) shared by every page
+│   ├── config.js               # Web Application URL, video URL and segment routes
+│   ├── i18n.js                 # I18nService: loads the JSON files and applies data-i18n
+│   ├── components/             # Language switcher, navbar, segment access, accordions,
+│   │                           # billing toggle, product video and demo request
+│   ├── effects/                # Magnetic effect of the call-to-action buttons
+│   └── utils/                  # Safe access to localStorage and sessionStorage
+└── styles/
+    ├── main.css                # Imports the modules below in cascade order
+    ├── variables.css           # Design tokens
+    ├── reset.css               # Base element styles
+    ├── layout.css              # Container, navbar, sections, grids and footer
+    ├── components.css          # Buttons, links, forms and skip link
+    ├── sections.css            # Sections of index.html
+    ├── pages.css               # demo.html, terms.html and privacy.html
+    ├── cursor.css              # Custom cursors
+    └── responsive.css          # Breakpoints (1080px, 900px and 600px)
 ```
 
-Texts are referenced from the HTML with `data-i18n` attributes. To add a text, add the same key to `en.js` and `es.js`.
+Texts are referenced from the HTML with `data-i18n` attributes. To add a text, add the same key to `en.json` and `es.json`. English (`en-US`) is the default language and Latin American Spanish (`es-419`) is the alternative.
 
 ## Run locally
 
-Open `index.html` in a browser, or serve the folder:
+The scripts are ES modules and the texts are loaded with `fetch`, so the site must be served over HTTP (opening `index.html` directly from the file system does not load them). Use the built-in server of WebStorm (*Open in Browser*) or:
 
 ```bash
 python -m http.server 8080
@@ -36,10 +52,16 @@ python -m http.server 8080
 
 ## Configuration
 
-`public/assets/scripts/main.js` has two constants to set when the related resources are published:
+`public/assets/scripts/config.js` has the settings that depend on other DoofPlus products:
 
-- `WEB_APP_URL`: base URL of the DoofPlus Web Application, used by the QA/QC and Production access buttons.
+- `WEB_APP_URL`: base URL of the DoofPlus Web Application. The QA/QC and Production access buttons open `/login?segment=qa` and `/login?segment=production`; until it is set, they lead to the *Choose your workspace* section.
 - `VIDEO_URL`: YouTube embed URL of the About-the-Product video.
+
+## Accessibility and SEO
+
+- Skip link to the main content, ARIA attributes on menus, accordions, toggles and form errors, and alternative text on every image.
+- `description`, `keywords` and `author` meta tags on every page.
+- The magnetic effect only reacts to a mouse and is disabled when the visitor prefers reduced motion.
 
 ## Deployment
 
