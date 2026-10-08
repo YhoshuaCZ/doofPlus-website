@@ -1,0 +1,38 @@
+/* Custom cursors in the DoofPlus colors. Each one falls back to the system cursor. */
+
+body {
+  cursor: url("../cursors/cursor.svg") 3 3, auto;
+}
+
+a,
+button,
+summary,
+label.segment-option,
+label.checkbox,
+[role="button"],
+input[type="checkbox"],
+input[type="radio"],
+input[type="submit"] {
+  cursor: url("../cursors/pointer.svg") 3 3, pointer;
+}
+
+a *,
+button * {
+  cursor: inherit;
+}
+
+input[type="email"],
+input[type="text"],
+textarea {
+  cursor: url("../cursors/text.svg") 16 16, text;
+}
+
+/* Touch screens keep the system cursors. */
+@media (hover: none) {
+  body,
+  a,
+  button,
+  input {
+    cursor: auto;
+  }
+}
