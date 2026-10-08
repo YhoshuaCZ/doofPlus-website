@@ -1,15 +1,22 @@
 /* Breakpoints: tablet (1080px), mobile (900px) and small mobile (600px).
-   The 12-column grid keeps 12 columns at every size; only the spans change. */
+   The 12-column grid keeps 12 columns at every size; only the spans change.
+   Mobile follows the Figma phone design of the Landing Page. */
 
-/* ---------- Responsive ---------- */
+/* Elements that only appear on mobile. */
+.mobile-only,
+.mobile-menu {
+  display: none;
+}
+
+/* ---------- Tablet ---------- */
 
 @media (max-width: 1080px) {
-  .nav-links {
-    gap: 22px;
-  }
-
   :root {
     --grid-gutter: 24px;
+  }
+
+  .nav-links {
+    gap: 22px;
   }
 
   /* Four cards per row become two (6 columns each). */
@@ -20,55 +27,127 @@
   .team-grid > :nth-child(4) { grid-column: span 6; }
   .team-grid > :nth-child(5) { grid-column: 4 / span 6; }
 
-  /* Contact: text and form of 6 columns each. */
-  .contact-grid > :first-child { grid-column: span 6; }
+  /* Contact: intro and info on 6 columns, form on the other 6. */
+  .contact-grid > .contact-intro,
+  .contact-grid > .contact-info { grid-column: 1 / span 6; }
 
   /* Footer: brand on its own row, four link groups of 3 columns. */
   .footer-grid > * { grid-column: span 3; }
   .footer-grid > :first-child { grid-column: 1 / -1; }
 }
 
+/* ---------- Mobile ---------- */
+
 @media (max-width: 900px) {
-  .menu-toggle {
-    display: flex;
-  }
-
-  .navbar-inner {
-    flex-wrap: wrap;
-  }
-
-  .nav-links,
-  .nav-actions {
-    display: none;
-    width: 100%;
-  }
-
-  .navbar.open .nav-links {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  .navbar.open .nav-actions {
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 16px;
-  }
-
-  .nav-links a.active::after {
-    display: none;
-  }
-
-  .page-simple .navbar-inner {
-    flex-wrap: nowrap;
-  }
-
   :root {
     --grid-gutter: 16px;
   }
 
-  /* Mobile: every block spans the 12 columns, so the layout is one column.
-     :nth-child(n) outranks the :first-child / :last-child spans of larger screens. */
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: inline;
+  }
+
+  /* Header: logo, language switch and menu button. */
+  .nav-links {
+    display: none;
+  }
+
+  .nav-actions {
+    gap: 12px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: var(--gray-bg);
+  }
+
+  .menu-toggle span {
+    transition: transform 0.2s, opacity 0.2s;
+  }
+
+  .menu-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* Full-screen menu below the header. */
+  .mobile-menu {
+    position: fixed;
+    top: 71px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 20px 32px;
+    overflow-y: auto;
+    background: var(--navy);
+  }
+
+  .mobile-links a {
+    display: block;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--navy-soft);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .mobile-links a.active {
+    color: var(--teal-bright);
+  }
+
+  .mobile-sign-in {
+    margin: 12px 0;
+    color: var(--teal-bright);
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .mobile-menu .lang-switch {
+    align-self: flex-start;
+    margin-top: 8px;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  /* Secondary pages: logo, language switch and a short "Back" link on the right. */
+  .page-simple .brand-group {
+    display: contents;
+  }
+
+  .page-simple .navbar-inner {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .page-simple .back-link {
+    order: 3;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  /* Every block spans the 12 columns, so the layout is one column.
+     :nth-child(n) outranks the spans and rows of larger screens. */
   .hero-grid > :nth-child(n),
   .grid-2 > :nth-child(n),
   .grid-3 > :nth-child(n),
@@ -80,14 +159,20 @@
   .contact-grid > :nth-child(n),
   .demo-grid > :nth-child(n) {
     grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .section {
+    padding: 64px 0;
   }
 
   .hero h1 {
     font-size: 36px;
   }
 
-  .section {
-    padding: 64px 0;
+  /* Features: only the accordion, as in the phone design. */
+  .feature-panels {
+    display: none;
   }
 
   .new-banner,
@@ -96,56 +181,201 @@
     align-items: flex-start;
   }
 
-  /* Footer: two link groups per row. */
-  .footer-grid > * { grid-column: span 6; }
-  .footer-grid > :first-child { grid-column: 1 / -1; }
-
   .about-text {
     margin-top: 24px;
   }
+
+  .contact-info {
+    margin-top: 0;
+  }
+
+  /* Footer: two link groups per row. */
+  .footer-grid > * { grid-column: span 6; }
+  .footer-grid > :first-child { grid-column: 1 / -1; }
 }
+
+/* ---------- Small mobile ---------- */
 
 @media (max-width: 600px) {
   .container {
     padding: 0 16px;
   }
 
-  .plan-features,
-  .segment-options,
-  .success-actions,
-  .summary dl {
-    grid-template-columns: 1fr;
+  .brand-logo {
+    height: 34px;
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+
+  .hero {
+    padding: 40px 0 48px;
   }
 
   .hero h1 {
-    font-size: 30px;
+    font-size: 32px;
   }
 
   .section h2 {
     font-size: 26px;
   }
 
-  .floating-card {
-    position: static;
-    margin-top: 12px;
+  .hero-subtitle {
+    margin-top: 28px;
+    font-size: 16px;
   }
 
-  .new-banner-actions,
-  .billing-toggle {
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .hero-trust {
+    display: none;
+  }
+
+  .hero-img {
+    aspect-ratio: 16 / 10;
+  }
+
+  .floating-card {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+
+  .btn-lg {
+    padding: 13px 24px;
+  }
+
+  .hero-buttons .btn,
+  .segment-card .btn,
+  .new-banner-actions .btn {
+    width: 100%;
+  }
+
+  .segment-card {
+    padding: 22px 18px;
+  }
+
+  .new-banner {
+    padding: 22px 18px;
+  }
+
+  .new-banner-actions {
     flex-direction: column;
     width: 100%;
   }
 
-  .back-link {
-    display: none;
+  .plan-features,
+  .segment-options,
+  .success-actions {
+    grid-template-columns: 1fr;
   }
 
+  /* Billing toggle keeps both options side by side, full width. */
+  .billing-toggle {
+    width: 100%;
+  }
+
+  .billing-toggle button {
+    flex: 1;
+    padding: 9px 10px;
+    font-size: 12px;
+  }
+
+  .plan-card {
+    padding: 24px 20px;
+  }
+
+  .faq-more a {
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* Footer: language switch and access buttons before the copyright. */
   .footer-bottom {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .footer:not(.footer-simple) .footer-bottom > p {
+    padding-top: 20px;
+    border-top: 1px solid var(--navy-soft);
   }
 
   .footer-actions {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .footer-actions .lang-switch {
+    align-self: flex-start;
+  }
+
+  .footer-actions .btn {
+    padding: 11px 24px;
+  }
+
+  .footer-legal {
+    gap: 40px;
+  }
+
+  /* Demo request: no dark panel; its title introduces the form. */
+  .page-simple {
+    background: #fff;
+  }
+
+  .simple-main {
+    padding: 28px 0 40px;
+  }
+
+  .demo-aside {
+    padding: 0;
+    background: none;
+    color: var(--text);
+  }
+
+  .demo-aside .overline-light {
+    color: var(--teal);
+  }
+
+  .demo-aside > p,
+  .check-list,
+  .page-simple .demo-form h2 {
+    display: none;
+  }
+
+  .demo-grid {
+    row-gap: 12px;
+  }
+
+  .page-simple .demo-form.form-card,
+  .success-card {
+    padding: 0;
+    border: 0;
+    background: none;
+    box-shadow: none;
+  }
+
+  /* Request summary as label / value rows. */
+  .summary dl {
+    grid-template-columns: 1fr;
+  }
+
+  .summary dl > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .summary dd {
+    text-align: right;
   }
 }
