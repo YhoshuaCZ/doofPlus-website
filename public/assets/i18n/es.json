@@ -1,7 +1,6 @@
 {
   "meta": {
     "home": "DoofPlus - Gestión de Calidad Farmacéutica",
-    "demo": "Solicitar una demo - DoofPlus",
     "terms": "Términos de Servicio - DoofPlus",
     "privacy": "Política de Privacidad - DoofPlus"
   },
@@ -24,7 +23,7 @@
     "title": "El futuro de la gestión de calidad farmacéutica",
     "subtitle": "DoofPlus centraliza la documentación de calidad, la trazabilidad de lotes, las desviaciones y los datos IoT en una sola plataforma para laboratorios farmacéuticos: menos errores manuales, registros inalterables y auditorías preparadas en una fracción del tiempo.",
     "cta_start": "Comenzar",
-    "cta_demo": "Solicitar una demo",
+    "cta_plans": "Ver planes",
     "trust": "Acceso por roles · Firmas electrónicas · 2FA · Audit trail inalterable",
     "image_alt": "Especialista operando un equipo en una sala limpia farmacéutica",
     "badge": "Listo para liberación",
@@ -43,9 +42,9 @@
     "prod_text": "Crea órdenes de producción, sigue cada lote en tiempo real, recibe materias primas y reacciona a las alertas IoT de la línea.",
     "prod_cta": "Ingresar al entorno de Producción →",
     "new_title": "¿Nuevo en DoofPlus?",
-    "new_text": "El administrador del laboratorio registra la organización y luego invita al equipo. ¿Aún no estás seguro? Solicita primero una demo.",
+    "new_text": "El administrador del laboratorio registra la organización y luego invita al equipo. ¿Tienes alguna duda antes? Escribe a nuestro equipo.",
     "register": "Registra tu laboratorio",
-    "demo": "Solicitar una demo"
+    "contact": "Contáctanos"
   },
   "services": {
     "overline": "Lo que ofrecemos",
@@ -182,7 +181,7 @@
     "enterprise_f3": "Gestión multisede",
     "enterprise_f4": "Analítica avanzada de KPI",
     "enterprise_cta": "Elegir Enterprise",
-    "note": "Todo plan empieza con el piloto de 30 días que se ofrece a los laboratorios que solicitan una demo. Precios en dólares estadounidenses; no incluyen impuestos."
+    "note": "Precios en dólares estadounidenses; no incluyen impuestos. Puedes cambiar o cancelar tu plan antes de la fecha de renovación."
   },
   "testimonials": {
     "overline": "Testimonios",
@@ -206,8 +205,8 @@
     "a2": "No. DoofPlus apoya el cumplimiento de las BPM y de los requisitos de DIGEMID mediante procesos controlados, firmas electrónicas y un audit trail inalterable, pero la validación de los sistemas computarizados y el cumplimiento final son responsabilidad de cada laboratorio.",
     "q3": "¿Qué sensores puedo conectar?",
     "a3": "Cualquier dispositivo que envíe telemetría a ThingsBoard por MQTT o HTTP: sensores de temperatura, humedad, presión diferencial y pH, entre otros. Cada dispositivo se registra y se asocia a su equipo en DoofPlus.",
-    "q4": "¿Hay una prueba gratuita?",
-    "a4": "Sí. Los laboratorios que solicitan una demo pueden empezar un piloto de 30 días antes de elegir el plan Standard Lab o Enterprise.",
+    "q4": "¿Puedo cambiar o cancelar mi plan?",
+    "a4": "Sí. El administrador del laboratorio puede pasar de Standard Lab a Enterprise, o al revés, o cancelar antes de la fecha de renovación. El pago anual ahorra el equivalente a dos meses.",
     "q5": "¿Cómo se protege mi información?",
     "a5": "Los datos se cifran en tránsito, el acceso es por roles con autenticación de dos factores en los pasos críticos y cada cambio queda registrado en el audit trail. Los datos personales se tratan según la Ley de Protección de Datos Personales del Perú (Ley N.° 29733).",
     "more": "¿No encontraste tu respuesta?",
@@ -216,27 +215,28 @@
   "contact": {
     "overline": "Contacto",
     "title": "¿Listo para digitalizar la gestión de calidad de tu laboratorio?",
-    "text": "Déjanos tu correo de trabajo y nuestro equipo te contactará para agendar una demo y empezar un piloto de 30 días.",
+    "text": "Envíanos tu consulta sobre la plataforma o los planes y nuestro equipo te responderá en un plazo de dos días hábiles.",
     "info": "doofplus.inges@gmail.com · Lima, Perú"
   },
   "form": {
+    "name": "Nombre completo",
+    "name_ph": "p. ej. María Pérez",
     "email": "Correo de trabajo",
     "email_ph": "nombre@laboratorio.com.pe",
     "lab": "Nombre del laboratorio",
     "optional": "(opcional)",
     "lab_ph": "p. ej. Laboratorios Andinos S.A.C.",
-    "segment": "Soy",
-    "qa": "Especialista QA/QC",
-    "prod": "Supervisor de producción",
-    "accept_pre": "Acepto la",
-    "accept_link": "Política de Privacidad",
-    "accept_post": "y que me contacten sobre mi solicitud.",
-    "submit": "Solicitar demo",
+    "message": "Tu consulta",
+    "message_ph": "Cuéntanos qué te gustaría saber sobre DoofPlus.",
+    "submit": "Enviar consulta",
     "disclaimer": "Al enviar aceptas nuestra Política de Privacidad. Respondemos en un plazo de dos días hábiles.",
-    "required": "* Campos obligatorios. Esta solicitud no crea una cuenta.",
-    "error_banner": "Tu solicitud no se envió. Revisa los campos resaltados.",
+    "error_banner": "Tu consulta no se envió. Revisa los campos resaltados.",
+    "error_name": "Ingresa tu nombre.",
     "error_email": "Ingresa un correo válido, p. ej. nombre@laboratorio.com.pe.",
-    "error_accept": "Debes aceptar la Política de Privacidad para enviar tu solicitud."
+    "error_message": "Escribe tu consulta.",
+    "success_title": "Consulta enviada",
+    "success_text": "Gracias, {name}. Nuestro equipo te responderá a <strong>{email}</strong> en un plazo de dos días hábiles.",
+    "again": "Enviar otra consulta"
   },
   "footer": {
     "tagline": "Gestión de calidad farmacéutica con IoT y cumplimiento regulatorio.",
@@ -256,37 +256,6 @@
     "copyright": "Copyright © 2026 IngesCompany. Todos los derechos reservados.",
     "qa_access": "Acceso QA/QC",
     "prod_access": "Acceso Producción"
-  },
-  "demo": {
-    "overline": "Solicitar una demo",
-    "title": "Conoce DoofPlus con tu propio flujo de calidad",
-    "text": "Nuestro equipo prepara una demo para tu segmento y, si se ajusta a tu laboratorio, un piloto de 30 días.",
-    "p1_title": "Especialistas QA/QC",
-    "p1_text": "Documentos, resultados analíticos, desviaciones, CAPA y liberación de lotes.",
-    "p2_title": "Supervisores de producción",
-    "p2_text": "Órdenes de producción, ejecución de lotes, materias primas y alertas IoT.",
-    "p3_title": "Tus datos, protegidos",
-    "p3_text": "Las solicitudes se tratan según la Ley de Protección de Datos Personales del Perú (Ley N.° 29733).",
-    "form_title": "Solicitar una demo",
-    "form_subtitle": "Cuéntanos quién eres y te contactaremos en un plazo de dos días hábiles.",
-    "success_title": "Solicitud de demo recibida",
-    "success_text": "Gracias. Nuestro equipo te contactará en <strong>{email}</strong> en un plazo de dos días hábiles para agendar tu demo.",
-    "summary": "Resumen de la solicitud",
-    "id": "ID de solicitud",
-    "email": "Correo de trabajo",
-    "lab": "Laboratorio",
-    "no_lab": "No indicado",
-    "segment": "Segmento",
-    "status": "Estado",
-    "received": "Recibida",
-    "requested_on": "Solicitada el",
-    "next": "¿Qué sigue?",
-    "n1": "Revisamos tu solicitud y tu segmento.",
-    "n2_qa": "Agendamos una demo enfocada en los flujos de QA/QC.",
-    "n2_prod": "Agendamos una demo enfocada en los flujos de producción.",
-    "n3": "Si DoofPlus se ajusta a tu laboratorio, empiezas un piloto de 30 días.",
-    "back": "Volver a DoofPlus",
-    "see_plans": "Ver planes"
   },
   "legal": {
     "overline": "Legal",
@@ -308,9 +277,9 @@
     "privacy_title": "Política de Privacidad",
     "privacy_intro": "Esta política explica cómo IngesCompany recopila y trata los datos personales a través de la Landing Page y la Web Application de DoofPlus, conforme a la Ley de Protección de Datos Personales del Perú (Ley N.° 29733) y su reglamento.",
     "p1_title": "1. Datos que recopilamos",
-    "p1_text": "De los visitantes que solicitan una demo: correo de trabajo, nombre del laboratorio y segmento. De los usuarios de la Web Application: nombre, correo de trabajo, rol, planta y los registros que crean o firman.",
+    "p1_text": "De los visitantes que envían una consulta: nombre, correo de trabajo, nombre del laboratorio y la consulta. De los usuarios de la Web Application: nombre, correo de trabajo, rol, planta y los registros que crean o firman.",
     "p2_title": "2. Finalidad",
-    "p2_text": "Usamos los datos para responder las solicitudes de demo, brindar el servicio, autenticar a los usuarios, mantener el audit trail que exigen las BPM y enviar notificaciones del servicio. No vendemos datos personales.",
+    "p2_text": "Usamos los datos para responder las consultas, brindar el servicio, autenticar a los usuarios, mantener el audit trail que exigen las BPM y enviar notificaciones del servicio. No vendemos datos personales.",
     "p3_title": "3. Almacenamiento y seguridad",
     "p3_text": "Los datos se guardan en bases de datos protegidas con cifrado en tránsito, acceso por roles y autenticación de dos factores. Los registros del audit trail se conservan durante el plazo que exige el sistema de calidad del laboratorio.",
     "p4_title": "4. Terceros",

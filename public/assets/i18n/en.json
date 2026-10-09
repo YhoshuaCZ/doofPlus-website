@@ -1,7 +1,6 @@
 {
   "meta": {
     "home": "DoofPlus - Pharmaceutical Quality Management",
-    "demo": "Request a demo - DoofPlus",
     "terms": "Terms of Service - DoofPlus",
     "privacy": "Privacy Policy - DoofPlus"
   },
@@ -24,7 +23,7 @@
     "title": "The Future of Pharmaceutical Quality Management",
     "subtitle": "DoofPlus centralizes quality documentation, batch traceability, deviations and IoT data in one platform for pharmaceutical laboratories—fewer manual errors, immutable records and audits prepared in a fraction of the time.",
     "cta_start": "Get Started",
-    "cta_demo": "Request a demo",
+    "cta_plans": "View plans",
     "trust": "Role-based access · Electronic signatures · 2FA · Immutable audit trail",
     "image_alt": "Specialist operating equipment in a pharmaceutical clean room",
     "badge": "Ready for release",
@@ -43,9 +42,9 @@
     "prod_text": "Create production orders, follow each batch in real time, receive raw materials and react to IoT alerts on the line.",
     "prod_cta": "Sign in to the Production environment →",
     "new_title": "New to DoofPlus?",
-    "new_text": "The laboratory administrator registers the organization and then invites the team. Not sure yet? Request a demo first.",
+    "new_text": "The laboratory administrator registers the organization and then invites the team. Have a question first? Write to our team.",
     "register": "Register your laboratory",
-    "demo": "Request a demo"
+    "contact": "Contact us"
   },
   "services": {
     "overline": "What we offer",
@@ -182,7 +181,7 @@
     "enterprise_f3": "Multi-site management",
     "enterprise_f4": "Advanced KPI analytics",
     "enterprise_cta": "Get Enterprise",
-    "note": "Every plan starts with the 30-day pilot offered to laboratories that request a demo. Prices in US dollars; taxes not included."
+    "note": "Prices in US dollars; taxes not included. You can change or cancel your plan before the renewal date."
   },
   "testimonials": {
     "overline": "Testimonials",
@@ -206,8 +205,8 @@
     "a2": "No. DoofPlus supports compliance with GMP and DIGEMID requirements through controlled processes, electronic signatures and an immutable audit trail, but the validation of computerized systems and the final compliance remain the responsibility of each laboratory.",
     "q3": "Which sensors can I connect?",
     "a3": "Any device that sends telemetry to ThingsBoard over MQTT or HTTP: temperature, humidity, differential pressure and pH sensors, among others. Each device is registered and associated with its equipment in DoofPlus.",
-    "q4": "Is there a free trial?",
-    "a4": "Yes. Laboratories that request a demo can start a 30-day pilot before choosing the Standard Lab or Enterprise plan.",
+    "q4": "Can I change or cancel my plan?",
+    "a4": "Yes. The laboratory administrator can switch between Standard Lab and Enterprise, or cancel before the renewal date. Annual billing saves the equivalent of two months.",
     "q5": "How is my information protected?",
     "a5": "Data is encrypted in transit, access is role-based with two-factor authentication at critical steps, and every change is recorded in the audit trail. Personal data is processed under Peru's Personal Data Protection Law (Law N.° 29733).",
     "more": "Didn't find your answer?",
@@ -216,27 +215,28 @@
   "contact": {
     "overline": "Contact",
     "title": "Ready to digitize your laboratory's quality management?",
-    "text": "Leave your work email and our team will contact you to schedule a demo and start a 30-day pilot.",
+    "text": "Send us your question about the platform or the plans and our team will reply within two business days.",
     "info": "doofplus.inges@gmail.com · Lima, Perú"
   },
   "form": {
+    "name": "Full name",
+    "name_ph": "e.g. María Pérez",
     "email": "Work email",
     "email_ph": "name@laboratory.com.pe",
     "lab": "Laboratory name",
     "optional": "(optional)",
     "lab_ph": "e.g. Laboratorios Andinos S.A.C.",
-    "segment": "I am a",
-    "qa": "QA/QC Specialist",
-    "prod": "Production Supervisor",
-    "accept_pre": "I accept the",
-    "accept_link": "Privacy Policy",
-    "accept_post": "and agree to be contacted about my request.",
-    "submit": "Request demo",
+    "message": "Your inquiry",
+    "message_ph": "Tell us what you would like to know about DoofPlus.",
+    "submit": "Send inquiry",
     "disclaimer": "By submitting you accept our Privacy Policy. We reply within two business days.",
-    "required": "* Required fields. No account is created with this request.",
-    "error_banner": "Your request was not sent. Check the highlighted fields.",
+    "error_banner": "Your inquiry was not sent. Check the highlighted fields.",
+    "error_name": "Enter your name.",
     "error_email": "Enter a valid email address, e.g. name@laboratory.com.pe.",
-    "error_accept": "You must accept the Privacy Policy to send your request."
+    "error_message": "Write your inquiry.",
+    "success_title": "Inquiry sent",
+    "success_text": "Thank you, {name}. Our team will reply to <strong>{email}</strong> within two business days.",
+    "again": "Send another inquiry"
   },
   "footer": {
     "tagline": "Pharmaceutical quality management with IoT and regulatory compliance.",
@@ -256,37 +256,6 @@
     "copyright": "Copyright © 2026 IngesCompany. All rights reserved.",
     "qa_access": "QA/QC Access",
     "prod_access": "Production Access"
-  },
-  "demo": {
-    "overline": "Request a demo",
-    "title": "See DoofPlus with your own quality workflow",
-    "text": "Our team prepares a demo for your segment and, if it fits your laboratory, a 30-day pilot.",
-    "p1_title": "QA/QC Specialists",
-    "p1_text": "Documents, analytical results, deviations, CAPA and batch release.",
-    "p2_title": "Production Supervisors",
-    "p2_text": "Production orders, batch execution, raw materials and IoT alerts.",
-    "p3_title": "Your data, protected",
-    "p3_text": "Requests are handled under Peru's Personal Data Protection Law (Law N.° 29733).",
-    "form_title": "Request a demo",
-    "form_subtitle": "Tell us who you are and we will contact you within two business days.",
-    "success_title": "Demo request received",
-    "success_text": "Thank you. Our team will contact you at <strong>{email}</strong> within two business days to schedule your demo.",
-    "summary": "Request summary",
-    "id": "Request ID",
-    "email": "Work email",
-    "lab": "Laboratory",
-    "no_lab": "Not provided",
-    "segment": "Segment",
-    "status": "Status",
-    "received": "Received",
-    "requested_on": "Requested on",
-    "next": "What happens next?",
-    "n1": "We review your request and your segment.",
-    "n2_qa": "We schedule a demo focused on the QA/QC workflows.",
-    "n2_prod": "We schedule a demo focused on the production workflows.",
-    "n3": "If DoofPlus fits your laboratory, you start a 30-day pilot.",
-    "back": "Back to DoofPlus",
-    "see_plans": "See plans"
   },
   "legal": {
     "overline": "Legal",
@@ -308,9 +277,9 @@
     "privacy_title": "Privacy Policy",
     "privacy_intro": "This policy explains how IngesCompany collects and processes personal data through the DoofPlus Landing Page and Web Application, in accordance with Peru's Personal Data Protection Law (Law N.° 29733) and its regulations.",
     "p1_title": "1. Data we collect",
-    "p1_text": "From visitors who request a demo: work email, laboratory name and segment. From users of the Web Application: name, work email, role, plant and the records they create or sign.",
+    "p1_text": "From visitors who send an inquiry: name, work email, laboratory name and the inquiry. From users of the Web Application: name, work email, role, plant and the records they create or sign.",
     "p2_title": "2. Purpose",
-    "p2_text": "We use the data to answer demo requests, provide the service, authenticate users, keep the audit trail required by GMP and send service notifications. We do not sell personal data.",
+    "p2_text": "We use the data to answer inquiries, provide the service, authenticate users, keep the audit trail required by GMP and send service notifications. We do not sell personal data.",
     "p3_title": "3. Storage and security",
     "p3_text": "Data is stored in databases protected with encryption in transit, role-based access and two-factor authentication. Audit-trail records are kept for the retention period required by the laboratory's quality system.",
     "p4_title": "4. Third parties",

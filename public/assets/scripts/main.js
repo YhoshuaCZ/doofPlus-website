@@ -5,11 +5,11 @@ import { initializeSegmentAccess } from './components/segment-access.js';
 import { initializeAccordions } from './components/accordion.js';
 import { initializeBillingToggle } from './components/billing-toggle.js';
 import { initializeProductVideo } from './components/product-video.js';
-import { initializeDemoRequest } from './components/demo-request.js';
+import { initializeContactInquiry } from './components/contact-inquiry.js';
 import { initializeMagneticEffect } from './effects/magnetic.effect.js';
 
 /**
- * Entry point shared by index.html, demo.html, terms.html and privacy.html.
+ * Entry point shared by index.html, terms.html and privacy.html.
  * Each component checks that its elements exist on the current page.
  */
 document.addEventListener('DOMContentLoaded', async () => {
@@ -26,6 +26,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   initializeAccordions();
   initializeBillingToggle();
   initializeProductVideo();
-  initializeDemoRequest();
+  initializeContactInquiry();
   initializeMagneticEffect();
 });
