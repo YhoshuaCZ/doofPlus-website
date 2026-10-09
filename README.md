@@ -8,8 +8,7 @@ Built with HTML5, CSS3 and JavaScript, bilingual (English by default and Latin A
 
 | Page | Content |
 |------|---------|
-| `index.html` | Hero, segment access, services, features, About-the-Product video, benefits, about us, team, plans, testimonials, FAQ, contact and footer. |
-| `demo.html` | Demo request form with validation and confirmation summary. |
+| `index.html` | Hero, segment access, services, features, About-the-Product video, benefits, plans, about us, team, testimonials, FAQ, contact inquiry form and footer. |
 | `terms.html` | Terms of Service. |
 | `privacy.html` | Privacy Policy (Law N.° 29733). |
 
@@ -25,7 +24,7 @@ public/assets/
 │   ├── config.js               # Web Application URL, video URL and segment routes
 │   ├── i18n.js                 # I18nService: loads the JSON files and applies data-i18n
 │   ├── components/             # Language switcher, navbar, segment access, accordions,
-│   │                           # billing toggle, product video and demo request
+│   │                           # billing toggle, product video and contact inquiry
 │   ├── effects/                # Magnetic effect of the call-to-action buttons
 │   └── utils/                  # Safe access to localStorage and sessionStorage
 └── styles/
@@ -36,7 +35,7 @@ public/assets/
     ├── grid.css                # 12-column fluid grid and the column span of each block
     ├── components.css          # Buttons, links, forms and skip link
     ├── sections.css            # Sections of index.html
-    ├── pages.css               # demo.html, terms.html and privacy.html
+    ├── pages.css               # terms.html and privacy.html
     ├── cursor.css              # Custom cursors
     └── responsive.css          # Breakpoints (1080px, 900px and 600px)
 ```
@@ -56,7 +55,7 @@ python -m http.server 8080
 `public/assets/scripts/config.js` has the settings that depend on other DoofPlus products:
 
 - `WEB_APP_URL`: base URL of the DoofPlus Web Application. The QA/QC and Production access buttons open `/login?segment=qa` and `/login?segment=production`; until it is set, they lead to the *Choose your workspace* section.
-- `VIDEO_URL`: YouTube embed URL of the About-the-Product video.
+- `VIDEO_URLS`: YouTube embed URLs of the About-the-Product (`product`) and About-the-Team (`team`) videos.
 
 ## Layout grid
 
@@ -72,11 +71,10 @@ Following the Web Style Guide (section 4.1.2), every layout is a **12-column flu
 
 On mobile (≤ 900px) the site follows the Figma phone design:
 
-- Header with logo, language switch and a menu button that opens a full-screen menu (links, Sign in, Get Started, Request a demo and language).
+- Header with logo, language switch and a menu button that opens a full-screen menu (links, Sign in, Get Started, View plans and language).
 - The Features preview panel is hidden and only the accordion remains.
 - About the Product shows the video between the intro and the chapters; Contact shows the email and location after the form.
 - Footer link groups in two columns, followed by the language switch, the QA/QC and Production access buttons and the copyright.
-- The demo request page drops its dark panel, shows a short "← Back" link and lists the request summary as label/value rows.
 
 ## Accessibility and SEO
 

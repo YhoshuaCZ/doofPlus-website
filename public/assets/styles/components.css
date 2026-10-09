@@ -152,7 +152,8 @@
   font-weight: 400;
 }
 
-.field input {
+.field input,
+.field textarea {
   width: 100%;
   padding: 11px 14px;
   border: 1px solid var(--border);
@@ -163,17 +164,25 @@
   font-weight: 400;
 }
 
-.field input::placeholder {
+.field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
   color: var(--muted-light);
 }
 
-.field input:focus {
+.field input:focus,
+.field textarea:focus {
   border-color: var(--teal);
   outline: none;
   box-shadow: 0 0 0 3px var(--teal-pale);
 }
 
-.field.invalid input {
+.field.invalid input,
+.field.invalid textarea {
   border-color: var(--danger);
 }
 
@@ -195,76 +204,6 @@
   color: #b91c1c;
   font-size: 13px;
   font-weight: 600;
-}
-
-.segment-options {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-.segment-option {
-  position: relative;
-}
-
-.segment-option input {
-  position: absolute;
-  opacity: 0;
-}
-
-.segment-option span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 10px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  font-weight: 500;
-  text-align: center;
-}
-
-/* Radio indicator: empty circle, filled when the option is selected. */
-.segment-option span::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  border: 1.5px solid currentColor;
-  border-radius: 50%;
-}
-
-.segment-option input:checked + span::before {
-  border-color: var(--teal);
-  background: var(--teal);
-}
-
-.segment-option input:checked + span {
-  border: 2px solid var(--teal);
-  background: var(--mint);
-  color: var(--teal);
-  font-weight: 600;
-}
-
-.segment-option input:focus-visible + span {
-  outline: 3px solid var(--teal-bright);
-}
-
-.checkbox {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 13px;
-}
-
-.checkbox input {
-  width: 18px;
-  height: 18px;
-  margin-top: 1px;
-  accent-color: var(--teal);
-}
-
-.checkbox a {
-  color: var(--teal);
 }
 
 .form-note {
@@ -290,6 +229,36 @@
   top: 0;
 }
 
-.success-card h1:focus {
+/* ---------- Contact inquiry confirmation ---------- */
+
+.form-success {
+  text-align: center;
+}
+
+.form-success:focus {
   outline: none;
+}
+
+.success-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--success-bg);
+  color: var(--success);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.form-success h3 {
+  margin-top: 16px;
+  font-size: 22px;
+}
+
+.success-text {
+  margin: 10px 0 24px;
+  color: var(--muted);
+  font-size: 14px;
 }

@@ -156,8 +156,7 @@
   .product-grid > :nth-child(n),
   .about-grid > :nth-child(n),
   .team-grid > :nth-child(n),
-  .contact-grid > :nth-child(n),
-  .demo-grid > :nth-child(n) {
+  .contact-grid > :nth-child(n) {
     grid-column: 1 / -1;
     grid-row: auto;
   }
@@ -271,9 +270,7 @@
     width: 100%;
   }
 
-  .plan-features,
-  .segment-options,
-  .success-actions {
+  .plan-features {
     grid-template-columns: 1fr;
   }
 
@@ -327,55 +324,12 @@
     gap: 40px;
   }
 
-  /* Demo request: no dark panel; its title introduces the form. */
+  /* Secondary pages: white background on small screens. */
   .page-simple {
     background: #fff;
   }
 
   .simple-main {
     padding: 28px 0 40px;
-  }
-
-  .demo-aside {
-    padding: 0;
-    background: none;
-    color: var(--text);
-  }
-
-  .demo-aside .overline-light {
-    color: var(--teal);
-  }
-
-  .demo-aside > p,
-  .check-list,
-  .page-simple .demo-form h2 {
-    display: none;
-  }
-
-  .demo-grid {
-    row-gap: 12px;
-  }
-
-  .page-simple .demo-form.form-card,
-  .success-card {
-    padding: 0;
-    border: 0;
-    background: none;
-    box-shadow: none;
-  }
-
-  /* Request summary as label / value rows. */
-  .summary dl {
-    grid-template-columns: 1fr;
-  }
-
-  .summary dl > div {
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-  }
-
-  .summary dd {
-    text-align: right;
   }
 }

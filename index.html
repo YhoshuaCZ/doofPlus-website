@@ -24,8 +24,8 @@
       <a href="#home" class="active" data-i18n="nav.home">Home</a>
       <a href="#features" data-i18n="nav.features">Features</a>
       <a href="#benefits" data-i18n="nav.benefits">Benefits</a>
-      <a href="#about" data-i18n="nav.about">About Us</a>
       <a href="#plans" data-i18n="nav.plans">Plans</a>
+      <a href="#about" data-i18n="nav.about">About Us</a>
     </nav>
 
     <div class="nav-actions">
@@ -47,12 +47,12 @@
       <a href="#home" data-i18n="nav.home">Home</a>
       <a href="#features" data-i18n="nav.features">Features</a>
       <a href="#benefits" data-i18n="nav.benefits">Benefits</a>
-      <a href="#about" data-i18n="nav.about">About Us</a>
       <a href="#plans" data-i18n="nav.plans">Plans</a>
+      <a href="#about" data-i18n="nav.about">About Us</a>
     </nav>
     <a href="#workspace" class="mobile-sign-in" data-i18n="nav.sign_in">Sign in</a>
     <a href="#workspace" class="btn btn-primary btn-block btn-lg" data-i18n="nav.get_started">Get Started</a>
-    <a href="demo.html" class="btn btn-ghost-light btn-block btn-lg" data-i18n="hero.cta_demo">Request a demo</a>
+    <a href="#plans" class="btn btn-ghost-light btn-block btn-lg" data-i18n="hero.cta_plans">View plans</a>
     <div class="lang-switch lang-switch-dark" role="group" aria-label="Language">
       <button class="lang-btn" type="button" data-lang="en">EN</button>
       <button class="lang-btn" type="button" data-lang="es">ES</button>
@@ -70,7 +70,7 @@
         <p class="hero-subtitle" data-i18n="hero.subtitle"></p>
         <div class="hero-buttons">
           <a href="#workspace" data-magnetic class="btn btn-primary btn-lg" data-i18n="hero.cta_start">Get Started</a>
-          <a href="demo.html" data-magnetic class="btn btn-ghost-light btn-lg" data-i18n="hero.cta_demo">Request a demo</a>
+          <a href="#plans" data-magnetic class="btn btn-ghost-light btn-lg" data-i18n="hero.cta_plans">View plans</a>
         </div>
         <p class="hero-trust" data-i18n="hero.trust"></p>
       </div>
@@ -114,7 +114,7 @@
         </div>
         <div class="new-banner-actions">
           <a href="#" data-magnetic class="btn btn-primary" data-app-segment="register" data-i18n="workspace.register">Register your laboratory</a>
-          <a href="demo.html" class="btn btn-outline" data-i18n="workspace.demo">Request a demo</a>
+          <a href="#contact" class="btn btn-outline" data-i18n="workspace.contact">Contact us</a>
         </div>
       </div>
     </div>
@@ -234,7 +234,7 @@
         <h2 data-i18n="product.title">See DoofPlus in action</h2>
         <p class="section-subtitle" data-i18n="product.subtitle"></p>
       </div>
-      <div class="video-player">
+      <div class="video-player" data-video="product">
         <img src="public/assets/images/pharmaceutical-laboratory.jpg" alt="">
         <span class="video-title" data-i18n="product.player_title">DoofPlus · About the Product</span>
         <button class="play-btn" type="button" data-video-play data-i18n-aria="product.play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
@@ -248,8 +248,8 @@
           <li><strong>01:30</strong> <span data-i18n="product.ch3"></span></li>
           <li><strong>02:20</strong> <span data-i18n="product.ch4"></span></li>
         </ul>
-        <a href="#" class="link-teal" data-video-link data-i18n="product.youtube">Can't play the video? Watch it on YouTube →</a>
-        <p class="video-soon" hidden data-i18n="product.soon"></p>
+        <a href="#" class="link-teal" data-video-link="product" data-i18n="product.youtube">Can't play the video? Watch it on YouTube →</a>
+        <p class="video-soon" hidden data-video-soon="product" data-i18n="product.soon"></p>
       </div>
     </div>
   </section>
@@ -266,6 +266,53 @@
         <article class="benefit-card"><strong class="benefit-value">&lt; 5 s</strong><h3 data-i18n="benefits.b3_title"></h3><p data-i18n="benefits.b3_text"></p></article>
         <article class="benefit-card"><strong class="benefit-value">US$0</strong><h3 data-i18n="benefits.b4_title"></h3><p data-i18n="benefits.b4_text"></p></article>
       </div>
+    </div>
+  </section>
+
+  <!-- Plans with monthly / annual billing -->
+  <section class="section section-gray" id="plans">
+    <div class="container">
+      <div class="plans-head">
+        <div>
+          <span class="overline" data-i18n="plans.overline">Plans</span>
+          <h2 data-i18n="plans.title">Simple plans for every laboratory</h2>
+          <p class="section-subtitle" data-i18n="plans.subtitle"></p>
+        </div>
+        <div class="billing-toggle" role="group">
+          <button type="button" class="active" data-billing="monthly" data-i18n="plans.monthly">Monthly</button>
+          <button type="button" data-billing="annual" data-i18n="plans.annually">Annually · 2 months free</button>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <article class="plan-card">
+          <h3 data-i18n="plans.standard_name">Standard Lab</h3>
+          <p class="plan-desc" data-i18n="plans.standard_desc"></p>
+          <p class="price"><strong data-price-monthly="US$199" data-price-annual="US$1,990">US$199</strong> <span data-period></span></p>
+          <p class="price-note" data-note-monthly="plans.standard_note_monthly" data-note-annual="plans.standard_note_annual"></p>
+          <ul class="plan-features">
+            <li data-i18n="plans.standard_f1"></li>
+            <li data-i18n="plans.standard_f2"></li>
+            <li data-i18n="plans.standard_f3"></li>
+            <li data-i18n="plans.standard_f4"></li>
+          </ul>
+          <a href="#" data-magnetic class="btn btn-outline btn-block" data-app-segment="register" data-i18n="plans.standard_cta">Get Standard Lab</a>
+        </article>
+        <article class="plan-card plan-featured">
+          <div class="plan-title-row"><h3 data-i18n="plans.enterprise_name">Enterprise</h3><span class="plan-badge" data-i18n="plans.enterprise_badge">Most complete</span></div>
+          <p class="plan-desc" data-i18n="plans.enterprise_desc"></p>
+          <p class="price"><strong data-price-monthly="US$599" data-price-annual="US$5,990">US$599</strong> <span data-period></span></p>
+          <p class="price-note" data-note-monthly="plans.enterprise_note_monthly" data-note-annual="plans.enterprise_note_annual"></p>
+          <ul class="plan-features">
+            <li data-i18n="plans.enterprise_f1"></li>
+            <li data-i18n="plans.enterprise_f2"></li>
+            <li data-i18n="plans.enterprise_f3"></li>
+            <li data-i18n="plans.enterprise_f4"></li>
+          </ul>
+          <a href="#" data-magnetic class="btn btn-white btn-block" data-app-segment="register" data-i18n="plans.enterprise_cta">Get Enterprise</a>
+        </article>
+      </div>
+      <p class="plans-note" data-i18n="plans.note"></p>
     </div>
   </section>
 
@@ -318,58 +365,23 @@
           <p data-i18n="team.rodolfo"></p>
         </article>
       </div>
-    </div>
-  </section>
 
-  <!-- Plans with monthly / annual billing -->
-  <section class="section section-gray" id="plans">
-    <div class="container">
-      <div class="plans-head">
-        <div>
-          <span class="overline" data-i18n="plans.overline">Plans</span>
-          <h2 data-i18n="plans.title">Simple plans for every laboratory</h2>
-          <p class="section-subtitle" data-i18n="plans.subtitle"></p>
+      <!-- About-the-Team video -->
+      <div class="team-video">
+        <h3 data-i18n="team.video_title">Meet the team</h3>
+        <p data-i18n="team.video_text"></p>
+        <div class="video-player video-player-dark" data-video="team">
+          <span class="video-title" data-i18n="team.player_title">DoofPlus · About the Team</span>
+          <button class="play-btn" type="button" data-video-play data-i18n-aria="team.play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
         </div>
-        <div class="billing-toggle" role="group">
-          <button type="button" class="active" data-billing="monthly" data-i18n="plans.monthly">Monthly</button>
-          <button type="button" data-billing="annual" data-i18n="plans.annually">Annually · 2 months free</button>
-        </div>
+        <a href="#" class="link-teal" data-video-link="team" data-i18n="team.youtube">Can't play the video? Watch it on YouTube →</a>
+        <p class="video-soon" hidden data-video-soon="team" data-i18n="team.soon"></p>
       </div>
-
-      <div class="grid-2">
-        <article class="plan-card">
-          <h3 data-i18n="plans.standard_name">Standard Lab</h3>
-          <p class="plan-desc" data-i18n="plans.standard_desc"></p>
-          <p class="price"><strong data-price-monthly="US$199" data-price-annual="US$1,990">US$199</strong> <span data-period></span></p>
-          <p class="price-note" data-note-monthly="plans.standard_note_monthly" data-note-annual="plans.standard_note_annual"></p>
-          <ul class="plan-features">
-            <li data-i18n="plans.standard_f1"></li>
-            <li data-i18n="plans.standard_f2"></li>
-            <li data-i18n="plans.standard_f3"></li>
-            <li data-i18n="plans.standard_f4"></li>
-          </ul>
-          <a href="demo.html" data-magnetic class="btn btn-outline btn-block" data-i18n="plans.standard_cta">Get Standard Lab</a>
-        </article>
-        <article class="plan-card plan-featured">
-          <div class="plan-title-row"><h3 data-i18n="plans.enterprise_name">Enterprise</h3><span class="plan-badge" data-i18n="plans.enterprise_badge">Most complete</span></div>
-          <p class="plan-desc" data-i18n="plans.enterprise_desc"></p>
-          <p class="price"><strong data-price-monthly="US$599" data-price-annual="US$5,990">US$599</strong> <span data-period></span></p>
-          <p class="price-note" data-note-monthly="plans.enterprise_note_monthly" data-note-annual="plans.enterprise_note_annual"></p>
-          <ul class="plan-features">
-            <li data-i18n="plans.enterprise_f1"></li>
-            <li data-i18n="plans.enterprise_f2"></li>
-            <li data-i18n="plans.enterprise_f3"></li>
-            <li data-i18n="plans.enterprise_f4"></li>
-          </ul>
-          <a href="demo.html" data-magnetic class="btn btn-white btn-block" data-i18n="plans.enterprise_cta">Get Enterprise</a>
-        </article>
-      </div>
-      <p class="plans-note" data-i18n="plans.note"></p>
     </div>
   </section>
 
   <!-- Testimonials -->
-  <section class="section" id="testimonials">
+  <section class="section section-gray" id="testimonials">
     <div class="container">
       <span class="overline" data-i18n="testimonials.overline">Testimonials</span>
       <h2 data-i18n="testimonials.title">What our clients think</h2>
@@ -394,7 +406,7 @@
   </section>
 
   <!-- FAQ -->
-  <section class="section section-gray" id="faq">
+  <section class="section" id="faq">
     <div class="container">
       <span class="overline" data-i18n="faq.overline">FAQ</span>
       <h2 data-i18n="faq.title">Frequently asked questions</h2>
@@ -425,7 +437,7 @@
     </div>
   </section>
 
-  <!-- Contact: demo request -->
+  <!-- Contact: inquiry form (US04) -->
   <section class="section section-teal" id="contact">
     <div class="container contact-grid">
       <div class="contact-intro">
@@ -433,8 +445,13 @@
         <h2 data-i18n="contact.title"></h2>
         <p class="contact-text" data-i18n="contact.text"></p>
       </div>
-      <form class="form-card demo-form" novalidate data-redirect="demo.html">
+      <form class="form-card contact-form" novalidate>
         <div class="form-error" hidden data-i18n="form.error_banner"></div>
+        <label class="field">
+          <span><span data-i18n="form.name">Full name</span> *</span>
+          <input type="text" name="name" autocomplete="name" required data-i18n-placeholder="form.name_ph">
+          <small class="field-error" hidden data-i18n="form.error_name"></small>
+        </label>
         <label class="field">
           <span><span data-i18n="form.email">Work email</span> *</span>
           <input type="email" name="email" autocomplete="email" required data-i18n-placeholder="form.email_ph">
@@ -444,16 +461,20 @@
           <span><span data-i18n="form.lab">Laboratory name</span> <em data-i18n="form.optional">(optional)</em></span>
           <input type="text" name="lab" autocomplete="organization" data-i18n-placeholder="form.lab_ph">
         </label>
-        <fieldset class="field">
-          <legend><span data-i18n="form.segment">I am a</span> *</legend>
-          <div class="segment-options">
-            <label class="segment-option"><input type="radio" name="segment" value="qa" checked><span data-i18n="form.qa">QA/QC Specialist</span></label>
-            <label class="segment-option"><input type="radio" name="segment" value="production"><span data-i18n="form.prod">Production Supervisor</span></label>
-          </div>
-        </fieldset>
-        <button type="submit" data-magnetic class="btn btn-primary btn-block" data-i18n="form.submit">Request demo</button>
+        <label class="field">
+          <span><span data-i18n="form.message">Your inquiry</span> *</span>
+          <textarea name="message" rows="4" required data-i18n-placeholder="form.message_ph"></textarea>
+          <small class="field-error" hidden data-i18n="form.error_message"></small>
+        </label>
+        <button type="submit" data-magnetic class="btn btn-primary btn-block" data-i18n="form.submit">Send inquiry</button>
         <p class="form-note" data-i18n="form.disclaimer"></p>
       </form>
+      <div class="form-card form-success" hidden tabindex="-1" data-contact-success>
+        <span class="success-icon" aria-hidden="true">✓</span>
+        <h3 data-i18n="form.success_title">Inquiry sent</h3>
+        <p class="success-text"></p>
+        <button type="button" class="btn btn-outline" data-contact-again data-i18n="form.again">Send another inquiry</button>
+      </div>
       <p class="contact-info" data-i18n="contact.info"></p>
     </div>
   </section>

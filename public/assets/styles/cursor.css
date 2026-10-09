@@ -7,11 +7,7 @@ body {
 a,
 button,
 summary,
-label.segment-option,
-label.checkbox,
 [role="button"],
-input[type="checkbox"],
-input[type="radio"],
 input[type="submit"] {
   cursor: url("../cursors/pointer.svg") 3 3, pointer;
 }
