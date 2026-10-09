@@ -720,6 +720,11 @@
   letter-spacing: 2px;
 }
 
+/* On a gray section the cards turn white so they stay visible. */
+.section-gray .testimonial {
+  background: #fff;
+}
+
 .testimonial blockquote {
   flex: 1;
   margin: 10px 0 28px;

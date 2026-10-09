@@ -24,8 +24,8 @@
       <a href="#home" class="active" data-i18n="nav.home">Home</a>
       <a href="#features" data-i18n="nav.features">Features</a>
       <a href="#benefits" data-i18n="nav.benefits">Benefits</a>
-      <a href="#about" data-i18n="nav.about">About Us</a>
       <a href="#plans" data-i18n="nav.plans">Plans</a>
+      <a href="#about" data-i18n="nav.about">About Us</a>
     </nav>
 
     <div class="nav-actions">
@@ -47,8 +47,8 @@
       <a href="#home" data-i18n="nav.home">Home</a>
       <a href="#features" data-i18n="nav.features">Features</a>
       <a href="#benefits" data-i18n="nav.benefits">Benefits</a>
-      <a href="#about" data-i18n="nav.about">About Us</a>
       <a href="#plans" data-i18n="nav.plans">Plans</a>
+      <a href="#about" data-i18n="nav.about">About Us</a>
     </nav>
     <a href="#workspace" class="mobile-sign-in" data-i18n="nav.sign_in">Sign in</a>
     <a href="#workspace" class="btn btn-primary btn-block btn-lg" data-i18n="nav.get_started">Get Started</a>
@@ -269,6 +269,53 @@
     </div>
   </section>
 
+  <!-- Plans with monthly / annual billing -->
+  <section class="section section-gray" id="plans">
+    <div class="container">
+      <div class="plans-head">
+        <div>
+          <span class="overline" data-i18n="plans.overline">Plans</span>
+          <h2 data-i18n="plans.title">Simple plans for every laboratory</h2>
+          <p class="section-subtitle" data-i18n="plans.subtitle"></p>
+        </div>
+        <div class="billing-toggle" role="group">
+          <button type="button" class="active" data-billing="monthly" data-i18n="plans.monthly">Monthly</button>
+          <button type="button" data-billing="annual" data-i18n="plans.annually">Annually · 2 months free</button>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <article class="plan-card">
+          <h3 data-i18n="plans.standard_name">Standard Lab</h3>
+          <p class="plan-desc" data-i18n="plans.standard_desc"></p>
+          <p class="price"><strong data-price-monthly="US$199" data-price-annual="US$1,990">US$199</strong> <span data-period></span></p>
+          <p class="price-note" data-note-monthly="plans.standard_note_monthly" data-note-annual="plans.standard_note_annual"></p>
+          <ul class="plan-features">
+            <li data-i18n="plans.standard_f1"></li>
+            <li data-i18n="plans.standard_f2"></li>
+            <li data-i18n="plans.standard_f3"></li>
+            <li data-i18n="plans.standard_f4"></li>
+          </ul>
+          <a href="demo.html" data-magnetic class="btn btn-outline btn-block" data-i18n="plans.standard_cta">Get Standard Lab</a>
+        </article>
+        <article class="plan-card plan-featured">
+          <div class="plan-title-row"><h3 data-i18n="plans.enterprise_name">Enterprise</h3><span class="plan-badge" data-i18n="plans.enterprise_badge">Most complete</span></div>
+          <p class="plan-desc" data-i18n="plans.enterprise_desc"></p>
+          <p class="price"><strong data-price-monthly="US$599" data-price-annual="US$5,990">US$599</strong> <span data-period></span></p>
+          <p class="price-note" data-note-monthly="plans.enterprise_note_monthly" data-note-annual="plans.enterprise_note_annual"></p>
+          <ul class="plan-features">
+            <li data-i18n="plans.enterprise_f1"></li>
+            <li data-i18n="plans.enterprise_f2"></li>
+            <li data-i18n="plans.enterprise_f3"></li>
+            <li data-i18n="plans.enterprise_f4"></li>
+          </ul>
+          <a href="demo.html" data-magnetic class="btn btn-white btn-block" data-i18n="plans.enterprise_cta">Get Enterprise</a>
+        </article>
+      </div>
+      <p class="plans-note" data-i18n="plans.note"></p>
+    </div>
+  </section>
+
   <!-- About us -->
   <section class="section section-mint" id="about">
     <div class="container about-grid">
@@ -321,55 +368,8 @@
     </div>
   </section>
 
-  <!-- Plans with monthly / annual billing -->
-  <section class="section section-gray" id="plans">
-    <div class="container">
-      <div class="plans-head">
-        <div>
-          <span class="overline" data-i18n="plans.overline">Plans</span>
-          <h2 data-i18n="plans.title">Simple plans for every laboratory</h2>
-          <p class="section-subtitle" data-i18n="plans.subtitle"></p>
-        </div>
-        <div class="billing-toggle" role="group">
-          <button type="button" class="active" data-billing="monthly" data-i18n="plans.monthly">Monthly</button>
-          <button type="button" data-billing="annual" data-i18n="plans.annually">Annually · 2 months free</button>
-        </div>
-      </div>
-
-      <div class="grid-2">
-        <article class="plan-card">
-          <h3 data-i18n="plans.standard_name">Standard Lab</h3>
-          <p class="plan-desc" data-i18n="plans.standard_desc"></p>
-          <p class="price"><strong data-price-monthly="US$199" data-price-annual="US$1,990">US$199</strong> <span data-period></span></p>
-          <p class="price-note" data-note-monthly="plans.standard_note_monthly" data-note-annual="plans.standard_note_annual"></p>
-          <ul class="plan-features">
-            <li data-i18n="plans.standard_f1"></li>
-            <li data-i18n="plans.standard_f2"></li>
-            <li data-i18n="plans.standard_f3"></li>
-            <li data-i18n="plans.standard_f4"></li>
-          </ul>
-          <a href="demo.html" data-magnetic class="btn btn-outline btn-block" data-i18n="plans.standard_cta">Get Standard Lab</a>
-        </article>
-        <article class="plan-card plan-featured">
-          <div class="plan-title-row"><h3 data-i18n="plans.enterprise_name">Enterprise</h3><span class="plan-badge" data-i18n="plans.enterprise_badge">Most complete</span></div>
-          <p class="plan-desc" data-i18n="plans.enterprise_desc"></p>
-          <p class="price"><strong data-price-monthly="US$599" data-price-annual="US$5,990">US$599</strong> <span data-period></span></p>
-          <p class="price-note" data-note-monthly="plans.enterprise_note_monthly" data-note-annual="plans.enterprise_note_annual"></p>
-          <ul class="plan-features">
-            <li data-i18n="plans.enterprise_f1"></li>
-            <li data-i18n="plans.enterprise_f2"></li>
-            <li data-i18n="plans.enterprise_f3"></li>
-            <li data-i18n="plans.enterprise_f4"></li>
-          </ul>
-          <a href="demo.html" data-magnetic class="btn btn-white btn-block" data-i18n="plans.enterprise_cta">Get Enterprise</a>
-        </article>
-      </div>
-      <p class="plans-note" data-i18n="plans.note"></p>
-    </div>
-  </section>
-
   <!-- Testimonials -->
-  <section class="section" id="testimonials">
+  <section class="section section-gray" id="testimonials">
     <div class="container">
       <span class="overline" data-i18n="testimonials.overline">Testimonials</span>
       <h2 data-i18n="testimonials.title">What our clients think</h2>
@@ -394,7 +394,7 @@
   </section>
 
   <!-- FAQ -->
-  <section class="section section-gray" id="faq">
+  <section class="section" id="faq">
     <div class="container">
       <span class="overline" data-i18n="faq.overline">FAQ</span>
       <h2 data-i18n="faq.title">Frequently asked questions</h2>
