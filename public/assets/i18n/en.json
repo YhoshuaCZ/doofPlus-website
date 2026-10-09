@@ -152,7 +152,14 @@
     "yhoshua": "Curious about technology and calm under pressure; follows the latest trends in software.",
     "ricardo": "Responsible and organized; experienced in programming, databases and project development.",
     "nestor": "Passionate about application development, databases and agile methodologies.",
-    "rodolfo": "Punctual and responsible; drawn to programming since his first school courses."
+    "rodolfo": "Punctual and responsible; drawn to programming since his first school courses.",
+    "video_title": "Meet the team",
+    "video_text": "A short video where the members of IngesCompany present themselves and explain how they build DoofPlus.",
+    "player_title": "DoofPlus · About the Team",
+    "play": "Play the team video",
+    "youtube": "Can't play the video? Watch it on YouTube →",
+    "soon": "The team video will be published soon on the DoofPlus YouTube channel.",
+    "unavailable": "The video is not available right now. You can watch it on the DoofPlus YouTube channel."
   },
   "plans": {
     "overline": "Plans",

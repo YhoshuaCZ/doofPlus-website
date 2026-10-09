@@ -152,7 +152,14 @@
     "yhoshua": "Curioso por la tecnología y tranquilo bajo presión; sigue las últimas tendencias del software.",
     "ricardo": "Responsable y organizado; con experiencia en programación, bases de datos y desarrollo de proyectos.",
     "nestor": "Apasionado por el desarrollo de aplicaciones, las bases de datos y las metodologías ágiles.",
-    "rodolfo": "Puntual y responsable; atraído por la programación desde sus primeros cursos escolares."
+    "rodolfo": "Puntual y responsable; atraído por la programación desde sus primeros cursos escolares.",
+    "video_title": "Conoce al equipo",
+    "video_text": "Un video corto en el que los integrantes de IngesCompany se presentan y cuentan cómo construyen DoofPlus.",
+    "player_title": "DoofPlus · About the Team",
+    "play": "Reproducir el video del equipo",
+    "youtube": "¿No se reproduce el video? Míralo en YouTube →",
+    "soon": "El video del equipo se publicará pronto en el canal de YouTube de DoofPlus.",
+    "unavailable": "El video no está disponible en este momento. Puedes verlo en el canal de YouTube de DoofPlus."
   },
   "plans": {
     "overline": "Planes",

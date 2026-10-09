@@ -522,6 +522,27 @@
   margin-top: 40px;
 }
 
+/* About-the-Team video, centered below the team cards. */
+.team-video {
+  max-width: 820px;
+  margin: 56px auto 0;
+  text-align: center;
+}
+
+.team-video > p {
+  margin: 6px 0 20px;
+  color: var(--muted);
+}
+
+.team-video .link-teal {
+  display: inline-block;
+  margin-top: 14px;
+}
+
+.video-player-dark {
+  background: var(--navy);
+}
+
 .team-card {
   padding: 20px 20px 36px;
   border: 1px solid var(--border);

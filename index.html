@@ -234,7 +234,7 @@
         <h2 data-i18n="product.title">See DoofPlus in action</h2>
         <p class="section-subtitle" data-i18n="product.subtitle"></p>
       </div>
-      <div class="video-player">
+      <div class="video-player" data-video="product">
         <img src="public/assets/images/pharmaceutical-laboratory.jpg" alt="">
         <span class="video-title" data-i18n="product.player_title">DoofPlus · About the Product</span>
         <button class="play-btn" type="button" data-video-play data-i18n-aria="product.play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
@@ -248,8 +248,8 @@
           <li><strong>01:30</strong> <span data-i18n="product.ch3"></span></li>
           <li><strong>02:20</strong> <span data-i18n="product.ch4"></span></li>
         </ul>
-        <a href="#" class="link-teal" data-video-link data-i18n="product.youtube">Can't play the video? Watch it on YouTube →</a>
-        <p class="video-soon" hidden data-i18n="product.soon"></p>
+        <a href="#" class="link-teal" data-video-link="product" data-i18n="product.youtube">Can't play the video? Watch it on YouTube →</a>
+        <p class="video-soon" hidden data-video-soon="product" data-i18n="product.soon"></p>
       </div>
     </div>
   </section>
@@ -364,6 +364,18 @@
           <div class="team-head"><img src="public/assets/images/team/rodolfo.jpg" alt="Rodolfo Zavaleta"><div><h3>Rodolfo Zavaleta</h3><span data-i18n="team.role"></span></div></div>
           <p data-i18n="team.rodolfo"></p>
         </article>
+      </div>
+
+      <!-- About-the-Team video -->
+      <div class="team-video">
+        <h3 data-i18n="team.video_title">Meet the team</h3>
+        <p data-i18n="team.video_text"></p>
+        <div class="video-player video-player-dark" data-video="team">
+          <span class="video-title" data-i18n="team.player_title">DoofPlus · About the Team</span>
+          <button class="play-btn" type="button" data-video-play data-i18n-aria="team.play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+        </div>
+        <a href="#" class="link-teal" data-video-link="team" data-i18n="team.youtube">Can't play the video? Watch it on YouTube →</a>
+        <p class="video-soon" hidden data-video-soon="team" data-i18n="team.soon"></p>
       </div>
     </div>
   </section>

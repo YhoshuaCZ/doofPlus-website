@@ -55,7 +55,7 @@ python -m http.server 8080
 `public/assets/scripts/config.js` has the settings that depend on other DoofPlus products:
 
 - `WEB_APP_URL`: base URL of the DoofPlus Web Application. The QA/QC and Production access buttons open `/login?segment=qa` and `/login?segment=production`; until it is set, they lead to the *Choose your workspace* section.
-- `VIDEO_URL`: YouTube embed URL of the About-the-Product video.
+- `VIDEO_URLS`: YouTube embed URLs of the About-the-Product (`product`) and About-the-Team (`team`) videos.
 
 ## Layout grid
 
